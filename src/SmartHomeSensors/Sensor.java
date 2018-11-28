@@ -1,4 +1,4 @@
-package com.company.Sensor;
+package SmartHomeSensors;
 import java.io.IOException;
 import java.util.*;
 import java.net.*;
@@ -27,25 +27,22 @@ import java.net.*;
     {
         try
         {
-            socket = new DatagramSocket();
-            address = InetAddress.getByName("localhost");
+            this.socket = new DatagramSocket();
+            //address = InetAddress.getByName("localhost");
+            this.address = InetAddress.getLocalHost();
         } catch (SocketException se){se.printStackTrace();} catch (UnknownHostException uhe) {uhe.printStackTrace();}
 
-        message
+        this.message
                 = "testsensor: testdata"
-                + " address: " + address.getHostAddress()
-                + " port: " + port;
+                + " address: " + this.address.getHostAddress()
+                + " port: " + this.port;
     }
     public Sensor(InetAddress address, int port) throws SocketException
     {
-        try
-        {
-            this.socket = new DatagramSocket(port);
-            this.address = InetAddress.getByName("localhost");
-            this.port = port;
-        } catch (SocketException se){se.printStackTrace();} catch (UnknownHostException uhe) {uhe.printStackTrace();}
-
-        message
+        this.socket = new DatagramSocket(port);
+        this.address = address;
+        this.port = port;
+        this.message
                 = "testsensor: testdata"
                 + " address: " + address.getHostAddress()
                 + " port: " + port;
@@ -55,24 +52,15 @@ import java.net.*;
     //Running this Code in a Thread
     public void run()
     {
-        running = true;
+        this.running = true;
 
-        //this block is testing sending via UDP
-       /* boolean test = false;
-        try{test = testSending(message, address, port);} catch (IOException io){io.printStackTrace();}
-        if(test == false)
-        {
-            System.out.println("Test failed: Cannot send and receive Data.");
-            return;
-        }
-        */
-        while(running)
+        while(this.running)
         {
             try { Thread.sleep(1000);
-            } catch (InterruptedException ie) {ie.printStackTrace(); running = false; continue;}
+            } catch (InterruptedException ie) {ie.printStackTrace(); this.running = false; continue;}
 
-            message = this.measure();
-            try {sendMessage(message, address, port);
+            this.message = this.measure();
+            try {sendMessage(this.message, this.address, this.port);
             } catch (IOException io) {io.printStackTrace();}
 
         }
@@ -81,11 +69,12 @@ import java.net.*;
     protected String measure(){return null;} //Should be overridden
 
      //Sending Message with UDP
-    protected void sendMessage(String message, InetAddress address, int port) throws IOException
+    protected void sendMessage
+    (String message, InetAddress address, int port) throws IOException
     {
-        buf = message.getBytes();
+        this.buf = message.getBytes();
         DatagramPacket packet
-                = new DatagramPacket(buf, buf.length, address, port);
+                = new DatagramPacket(this.buf, this.buf.length, address, port);
         socket.send(packet);
         //Insert UDP Send Code here
     }

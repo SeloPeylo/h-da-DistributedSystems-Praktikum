@@ -1,5 +1,4 @@
-package com.company.Sensor;
-import java.io.IOException;
+package SmartHomeSensors;
 import java.net.*;
 
 public class WindowSensor extends Sensor {

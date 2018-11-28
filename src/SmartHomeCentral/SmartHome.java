@@ -1,19 +1,10 @@
-package com.company;
+package SmartHomeCentral;
 
 import java.io.IOException;
 import java.net.*;
 
-import com.company.Sensor.BathSensor;
-import com.company.Sensor.HumiditySensor;
-import com.company.Sensor.TempSensor;
-import com.company.Sensor.WindowSensor;
-
 public class SmartHome implements Runnable{
 
-    private BathSensor bath = new BathSensor();
-    private HumiditySensor humidity = new HumiditySensor();
-    private TempSensor temp = new TempSensor();
-    private WindowSensor window = new WindowSensor();
 
     private DatagramSocket socket;
     int port = 9876;
@@ -22,8 +13,6 @@ public class SmartHome implements Runnable{
     byte[] buf = new byte[256];
     DatagramPacket packet  = new DatagramPacket(buf, buf.length);
     private boolean isRunning = false;
-
-    Thread[] sensors = {new Thread(bath), new Thread(humidity), new Thread(temp), new Thread(window)};
 
     public SmartHome()
     {
@@ -36,10 +25,7 @@ public class SmartHome implements Runnable{
     public void run()
     {
         System.out.println("Starting Smart-Home-Central");
-        for(int i=0; i<sensors.length; i++)
-        {
-            sensors[i].start();
-        }
+
         isRunning = true;
         while(isRunning)
         {
