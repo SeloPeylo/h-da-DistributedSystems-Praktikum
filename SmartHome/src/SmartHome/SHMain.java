@@ -1,4 +1,4 @@
-/*package SmartHomeCentral;
+package SmartHome;
 public class SHMain {
 
     public static void main(String[] args) {
@@ -9,4 +9,3 @@ public class SHMain {
         t.start();
     }
 }
-*/
