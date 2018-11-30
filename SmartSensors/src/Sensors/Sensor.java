@@ -7,6 +7,7 @@ import java.net.*;
 
      // For when the class is running
     protected boolean running;
+    protected String sensorName = "Sensor";
 
     //Destination Address
     protected InetAddress address;
@@ -15,7 +16,6 @@ import java.net.*;
     //Variables needed to create a Package
     protected String message;
     protected byte[] buf;
-    protected DatagramSocket socket;
 
     //For generation of random Data
     protected Random random = new Random();
@@ -23,30 +23,25 @@ import java.net.*;
 
 
     //Constructors
-     public Sensor()
+     public Sensor() throws UnknownHostException
     {
-        try
-        {
-            this.socket = new DatagramSocket();
-            //address = InetAddress.getByName("localhost");
-            this.address = InetAddress.getLocalHost();
-        } catch (SocketException se){se.printStackTrace();} catch (UnknownHostException uhe) {uhe.printStackTrace();}
+        this.address = InetAddress.getLocalHost();
+        this.message = "testsensor: testdata";
 
-        this.message
-                = "testsensor: testdata"
-                + " address: " + this.address.getHostAddress()
-                + " port: " + this.port;
     }
-    public Sensor(InetAddress address, int port) throws SocketException
+    public Sensor(InetAddress address, int port)
     {
-        this.socket = new DatagramSocket(port);
         this.address = address;
         this.port = port;
-        this.message
-                = "testsensor: testdata"
-                + " address: " + address.getHostAddress()
-                + " port: " + port;
+        this.message = "testsensor: testdata";
+
     }
+
+     public Sensor(InetAddress address)
+     {
+         this.address = address;
+         this.message = "testsensor: testdata";
+     }
 
 
     //Running this Code in a Thread
@@ -60,7 +55,8 @@ import java.net.*;
             } catch (InterruptedException ie) {ie.printStackTrace(); this.running = false; continue;}
 
             this.message = this.measure();
-            try {sendMessage(this.message, this.address, this.port);
+
+            try {sendMessage(this.message);
             } catch (IOException io) {io.printStackTrace();}
 
         }
@@ -69,32 +65,57 @@ import java.net.*;
     protected String measure(){return null;} //Should be overridden
 
      //Sending Message with UDP
-    protected void sendMessage
-    (String message, InetAddress address, int port) throws IOException
+    protected void sendMessage(String message) throws IOException
     {
         this.buf = message.getBytes();
         DatagramPacket packet
-                = new DatagramPacket(this.buf, this.buf.length, address, port);
-        socket.send(packet);
-        System.out.println("Sending message to " + address.getHostAddress() + " at Port " + port);
+                = new DatagramPacket(this.buf, this.buf.length, this.address, this.port);
+
+        new Thread(new Sender(packet)).start();
+        System.out.printf("%s:\t sending message to %s at Port %d\n", this.sensorName, this.address.getHostAddress(), this.port);
         //Insert UDP Send Code here
     }
 
-    //Testing sending and receiving with udp socket
-    protected boolean testSending(String message, InetAddress address, int port) throws IOException
-    {
-        buf = message.getBytes();
-        DatagramPacket packet
-                = new DatagramPacket(buf, buf.length, address, port);
-        socket.send(packet);
-        packet = new DatagramPacket(buf, buf.length);
-        socket.receive(packet);
-        String received = new String(packet.getData());
-        if(received.equals(message))
-        {
-            System.out.println("== SensorSendingTest == Message: " + received);
-            return true;
-        } else { return false; }
-    }
+     public static void main(String args[]) throws UnknownHostException, SocketException
+     {
+         BathSensor bath;
+         HumiditySensor humidity;
+         TempSensor temp;
+         WindowSensor window;
 
+         InetAddress address;
+         int port;
+         switch (args.length)
+         {
+             case 1:
+                 address = InetAddress.getByName(args[0]);
+                 bath = new BathSensor(address);
+                 humidity = new HumiditySensor(address);
+                 temp = new TempSensor(address);
+                 window = new WindowSensor(address);
+                 break;
+
+             case 2:
+                 address = InetAddress.getByName(args[0]);
+                 port = Integer.parseInt(args[1]);
+                 bath = new BathSensor(address, port);
+                 humidity = new HumiditySensor(address, port);
+                 temp = new TempSensor(address, port);
+                 window = new WindowSensor(address, port);
+                 break;
+
+             default:
+                 bath = new BathSensor();
+                 humidity = new HumiditySensor();
+                 temp = new TempSensor();
+                 window = new WindowSensor();
+         }
+
+         Thread[] sensors = {new Thread(bath), new Thread(humidity), new Thread(temp), new Thread(window)};
+
+         for(int i=0; i<sensors.length; i++)
+         {
+             sensors[i].start();
+         }
+     }
 }

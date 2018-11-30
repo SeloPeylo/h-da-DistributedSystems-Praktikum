@@ -3,14 +3,14 @@ import java.net.*;
 
 public class TempSensor extends Sensor {
 
-    public TempSensor()
-    {
-        super();
-    }
+    public TempSensor() throws UnknownHostException
+    { super(); this.sensorName = "Temp-Sensor"; }
+
     public TempSensor(InetAddress address, int port) throws SocketException
-    {
-        super(address, port);
-    }
+    { super(address, port); this.sensorName = "Temp-Sensor"; }
+
+    public TempSensor(InetAddress address) throws SocketException
+    { super(address); this.sensorName = "Temp-Sensor"; }
 
     @Override
     public void run() {

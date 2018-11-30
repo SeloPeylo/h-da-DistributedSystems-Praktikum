@@ -3,14 +3,14 @@ import java.net.*;
 
 public class WindowSensor extends Sensor {
 
-    public WindowSensor()
-    {
-        super();
-    }
+    public WindowSensor() throws UnknownHostException
+    { super(); this.sensorName = "Window-Sensor"; }
+
     public WindowSensor(InetAddress address, int port) throws SocketException
-    {
-        super(address, port);
-    }
+    { super(address, port); this.sensorName = "Window-Sensor"; }
+
+    public WindowSensor(InetAddress address) throws SocketException
+    { super(address); this.sensorName = "Window-Sensor"; }
 
     @Override
     public void run() {
