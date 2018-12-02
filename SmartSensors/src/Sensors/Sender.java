@@ -1,41 +1,50 @@
 package Sensors;
 
+import javax.xml.crypto.Data;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.SocketException;
+import java.util.*;
 
 /*
 This class send each packet in its own thread and socket
  */
 public class Sender implements Runnable{
 
-    private DatagramPacket packet = null;
-    private int portHost = 0;
+    private Vector<DatagramPacket> packets = new Vector<>();
+    private Map<Integer, DatagramSocket> sockets = new HashMap<>();
 
-    public Sender(DatagramPacket packet) throws SocketException
-    {
-        this.packet = packet;
-    }
-    public Sender(int portHost, DatagramPacket packet)
-    {
+    public Sender() { }
 
-        this.packet = packet;
+    public void addPacket(DatagramPacket packet)
+    {
+        packets.add(packet);
     }
 
     public void run()
     {
-        try
+        DatagramPacket packet;
+        while(true)
         {
-            DatagramSocket socket;
-            if(this.portHost != 0)
+            try
+            { Thread.sleep(100);
+            } catch(InterruptedException ie){ie.printStackTrace();}
+            if(packets.size() > 0)
             {
-                socket = new DatagramSocket(this.portHost);
-            }
-            else { socket = new DatagramSocket(); }
+                try {
+                    packet = packets.remove(0);
+                    DatagramSocket socket;
+                    if(sockets.get(packet.getPort()) == null)
+                    {
+                        socket = new DatagramSocket(packet.getPort());
+                    } else { socket = sockets.get(packet.getPort()); }
 
-            socket.send(packet);
-            socket.close();
-        } catch (IOException io) {io.printStackTrace();}
+                    socket.send(packet);
+                    socket.close();
+                } catch (SocketException se) {se.printStackTrace();}
+                catch(IOException io) {io.printStackTrace();}
+            }
+        }
     }
 }

@@ -13,6 +13,12 @@ import java.net.*;
     protected InetAddress address;
     protected int port = 9876;
 
+    protected static Sender sender = new Sender();
+    protected static Thread senderThread = new Thread(sender);
+    static {
+        senderThread.start();
+    }
+
     //Variables needed to create a Package
     protected String message;
     protected byte[] buf;
@@ -42,8 +48,6 @@ import java.net.*;
          this.address = address;
          this.message = "testsensor: testdata";
      }
-
-
     //Running this Code in a Thread
     public void run()
     {
@@ -71,7 +75,8 @@ import java.net.*;
         DatagramPacket packet
                 = new DatagramPacket(this.buf, this.buf.length, this.address, this.port);
 
-        new Thread(new Sender(packet)).start();
+        sender.addPacket(packet);
+
         System.out.printf("%s:\t sending message to %s at Port %d\n", this.sensorName, this.address.getHostAddress(), this.port);
         //Insert UDP Send Code here
     }

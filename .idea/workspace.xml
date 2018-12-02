@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f6b6e6e-0899-4d54-bb8a-8afc606ad6f7" name="Default Changelist" comment="broken">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="6f6b6e6e-0899-4d54-bb8a-8afc606ad6f7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartSensors/SmartHome.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SmartSensors/SmartHome.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartSensors/SmartSensors.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SmartSensors/SmartSensors.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartSensors/src/Sensors/BathSensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/SmartSensors/src/Sensors/BathSensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartSensors/src/Sensors/HumiditySensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/SmartSensors/src/Sensors/HumiditySensor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartSensors/src/Sensors/Sender.java" beforeDir="false" afterPath="$PROJECT_DIR$/SmartSensors/src/Sensors/Sender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SmartSensors/src/Sensors/Sensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/SmartSensors/src/Sensors/Sensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartSensors/src/Sensors/SensorMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartSensors/src/Sensors/TempSensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/SmartSensors/src/Sensors/TempSensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartSensors/src/Sensors/WindowSensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/SmartSensors/src/Sensors/WindowSensor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartSensors/Sensors/Sensor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartSensors/Sensors/Sensor.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/production/group_d_8/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,27 +28,27 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="iml" value="5" />
-          <entry key="java" value="15" />
+          <entry key="java" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="5" />
-          <entry key="JAVA" value="15" />
+          <entry key="JAVA" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="iml" value="9" />
-          <entry key="java" value="3206" />
-          <entry key="txt" value="77" />
+          <entry key="java" value="5033" />
+          <entry key="txt" value="105" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="IDEA_MODULE" value="9" />
-          <entry key="JAVA" value="3206" />
-          <entry key="PLAIN_TEXT" value="77" />
+          <entry key="JAVA" value="5033" />
+          <entry key="PLAIN_TEXT" value="105" />
         </counts>
       </usages-collector>
     </session>
@@ -64,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SmartSensors/src/Sensors/Sensor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="73" column="36" lean-forward="true" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="36" />
+            <state relative-caret-position="-459">
+              <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,11 +70,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SmartSensors/src/Sensors/Sender.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="34" column="47" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
+            <state relative-caret-position="103">
+              <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#505#506#0" expanded="true" />
+                <element signature="e#540#541#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/lang/Integer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="117">
+              <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -101,10 +106,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SmartSensors/src/Sensors/HumiditySensor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
+            <state relative-caret-position="95">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
-                <element signature="e#411#412#0" expanded="true" />
                 <element signature="e#438#439#0" expanded="true" />
               </folding>
             </state>
@@ -290,7 +294,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543613351007" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543751055760" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/SmartHome" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -356,7 +360,7 @@
       <workItem from="1543523044480" duration="829000" />
       <workItem from="1543523939031" duration="317000" />
       <workItem from="1543524415324" duration="865000" />
-      <workItem from="1543525386033" duration="11553000" />
+      <workItem from="1543525386033" duration="18517000" />
     </task>
     <task id="LOCAL-00001" summary="Removed individual Projects and created two Modules in one Project">
       <created>1543523419008</created>
@@ -386,11 +390,18 @@
       <option name="project" value="LOCAL" />
       <updated>1543525607390</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixed socket binding issue">
+      <created>1543613392346</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1543613392346</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13564000" />
+    <option name="totallyTimeSpent" value="20528000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -405,8 +416,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3291815" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4039146" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3683274" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -435,7 +446,20 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Removed individual Projects and created two Modules in one Project" />
     <MESSAGE value="broken" />
-    <option name="LAST_COMMIT_MESSAGE" value="broken" />
+    <MESSAGE value="Fixed socket binding issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed socket binding issue" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SmartSensors/src/Sensors/Sender.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/SmartHome2/SmartHome2.iml">
@@ -514,17 +538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSensors/src/Sensors/HumiditySensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
-          <folding>
-            <element signature="e#411#412#0" expanded="true" />
-            <element signature="e#438#439#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SmartSensors/src/Sensors/TempSensor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -539,6 +552,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SmartSensors/src/Sensors/SocketManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SmartSensors/src/Sensors/HumiditySensor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#438#439#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SmartSensors/src/Sensors/BathSensor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -550,20 +583,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSensors/src/Sensors/SocketManager.java">
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/lang/Integer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="117">
+          <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SmartSensors/src/Sensors/Sensor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="73" column="36" lean-forward="true" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="36" />
+        <state relative-caret-position="-459">
+          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -572,10 +602,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SmartSensors/src/Sensors/Sender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="34" column="47" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
+        <state relative-caret-position="103">
+          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
           </folding>
         </state>
       </provider>
