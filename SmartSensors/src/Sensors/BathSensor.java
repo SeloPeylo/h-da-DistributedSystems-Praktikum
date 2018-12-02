@@ -20,7 +20,7 @@ public class BathSensor extends Sensor {
     protected String measure()
     {
         int measurement = super.random.nextInt() % 8000;
-        String message = "BathSensor RPM: " + measurement + " IP: " + super.address + " Port: " + super.port;
+        String message = "BathSensor RPM: " + measurement;
         return message;
     }
 }

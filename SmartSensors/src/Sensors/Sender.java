@@ -1,6 +1,5 @@
 package Sensors;
 
-import javax.xml.crypto.Data;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -14,6 +13,7 @@ public class Sender implements Runnable{
 
     private Vector<DatagramPacket> packets = new Vector<>();
     private Map<Integer, DatagramSocket> sockets = new HashMap<>();
+    private boolean running = false;
 
     public Sender() { }
 
@@ -25,7 +25,8 @@ public class Sender implements Runnable{
     public void run()
     {
         DatagramPacket packet;
-        while(true)
+        running = true;
+        while(running)
         {
             try
             { Thread.sleep(100);

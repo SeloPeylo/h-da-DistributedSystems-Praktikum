@@ -5,38 +5,48 @@ import java.net.*;
 
 public class SmartHome implements Runnable{
 
+    private DatagramPacket packet = null;
 
-    private DatagramSocket socket;
-    int port = 9876;
-    InetAddress address;
-
-    byte[] buf = new byte[256];
-    DatagramPacket packet  = new DatagramPacket(buf, buf.length);
-    private boolean isRunning = false;
-
-    public SmartHome()
+    public SmartHome(DatagramPacket packet)
     {
-        try
-        {
-            socket = new DatagramSocket(port);
-        } catch (SocketException se) {se.printStackTrace();}
+        this.packet = packet;
     }
 
     public void run()
     {
+        if(packet != null)
+        {
+            String message = new String(packet.getData());
+            System.out.println("Message from "
+                    + packet.getAddress()
+                    + " Port "
+                    + packet.getPort()
+                    + " Message: " + message);
+        }
+    }
+
+    public static void main(String[] args) {
+        // write your code here
         System.out.println("Starting Smart-Home-Central");
 
-        isRunning = true;
-        while(isRunning)
+        int port;
+        if(args.length == 0)
+        { port = 9876;
+        } else { port = Integer.parseInt(args[0]); }
+
+        DatagramSocket socket = null;
+        try{
+            socket = new DatagramSocket(port);
+        } catch(SocketException se) {se.printStackTrace(); System.exit(1);}
+
+        while(true)
         {
-            buf = new byte[256];
-            packet  = new DatagramPacket(buf, buf.length);
-            try
-            {
+            byte[] buf = new byte[256];
+            DatagramPacket packet = new DatagramPacket(buf, buf.length);
+
+            try {
                 socket.receive(packet);
-                address = packet.getAddress();
-                String message = new String(packet.getData());
-                System.out.println(message);
+                new Thread(new SmartHome(packet)).start();
             } catch (IOException io) {io.printStackTrace();}
         }
     }

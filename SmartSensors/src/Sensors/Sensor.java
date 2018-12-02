@@ -75,7 +75,10 @@ import java.net.*;
         DatagramPacket packet
                 = new DatagramPacket(this.buf, this.buf.length, this.address, this.port);
 
-        sender.addPacket(packet);
+        DatagramSocket socket = new DatagramSocket();
+        socket.send(packet);
+        socket.close();
+        //sender.addPacket(packet);
 
         System.out.printf("%s:\t sending message to %s at Port %d\n", this.sensorName, this.address.getHostAddress(), this.port);
         //Insert UDP Send Code here

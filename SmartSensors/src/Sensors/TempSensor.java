@@ -21,7 +21,7 @@ public class TempSensor extends Sensor {
     protected String measure()
     {
         float measurement = (-1500f + (super.random.nextInt() % 6000)) / 100 ; //-15 to 45 degrees
-        String message = "TempSensor Degrees: " + measurement + " IP: " + super.address + " Port: " + super.port;
+        String message = "TempSensor Degrees: " + measurement;
         return message;
     }
 }

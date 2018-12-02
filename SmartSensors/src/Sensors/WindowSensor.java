@@ -21,7 +21,7 @@ public class WindowSensor extends Sensor {
     protected String measure()
     {
         boolean measurement = super.random.nextBoolean();
-        String message = "WindowSensor IsOpen: " + measurement + " IP: " + super.address + " Port: " + super.port;
+        String message = "WindowSensor IsOpen: " + measurement;
         return message;
     }
 }

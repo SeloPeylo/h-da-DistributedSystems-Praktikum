@@ -21,7 +21,7 @@ public class HumiditySensor extends Sensor {
     protected String measure()
     {
         float measurement = (super.random.nextInt() % 10000) / 100f;
-        String message = "HumiditySensor Percent: " + measurement + " IP: " + super.address + " Port: " + super.port;
+        String message = "HumiditySensor Percent: " + measurement;
         return message;
     }
 }
