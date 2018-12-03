@@ -7,17 +7,12 @@ import java.net.*;
 
      // For when the class is running
     protected boolean running;
+    protected int sleepTime = 1000;
     protected String sensorName = "Sensor";
 
     //Destination Address
     protected InetAddress address;
     protected int port = 9876;
-
-    protected static Sender sender = new Sender();
-    protected static Thread senderThread = new Thread(sender);
-    static {
-        senderThread.start();
-    }
 
     //Variables needed to create a Package
     protected String message;
@@ -48,6 +43,13 @@ import java.net.*;
          this.address = address;
          this.message = "testsensor: testdata";
      }
+
+     public void setSleepTime(int time)
+     {
+         this.sleepTime = time;
+     }
+
+
     //Running this Code in a Thread
     public void run()
     {
@@ -55,7 +57,7 @@ import java.net.*;
 
         while(this.running)
         {
-            try { Thread.sleep(1000);
+            try { Thread.sleep(sleepTime);
             } catch (InterruptedException ie) {ie.printStackTrace(); this.running = false; continue;}
 
             this.message = this.measure();
@@ -91,33 +93,15 @@ import java.net.*;
          TempSensor temp;
          WindowSensor window;
 
+
          InetAddress address;
          int port;
-         switch (args.length)
-         {
-             case 1:
-                 address = InetAddress.getByName(args[0]);
-                 bath = new BathSensor(address);
-                 humidity = new HumiditySensor(address);
-                 temp = new TempSensor(address);
-                 window = new WindowSensor(address);
-                 break;
 
-             case 2:
-                 address = InetAddress.getByName(args[0]);
-                 port = Integer.parseInt(args[1]);
-                 bath = new BathSensor(address, port);
-                 humidity = new HumiditySensor(address, port);
-                 temp = new TempSensor(address, port);
-                 window = new WindowSensor(address, port);
-                 break;
 
-             default:
-                 bath = new BathSensor();
-                 humidity = new HumiditySensor();
-                 temp = new TempSensor();
-                 window = new WindowSensor();
-         }
+         bath = new BathSensor();
+         humidity = new HumiditySensor();
+         temp = new TempSensor();
+         window = new WindowSensor();
 
          Thread[] sensors = {new Thread(bath), new Thread(humidity), new Thread(temp), new Thread(window)};
 
