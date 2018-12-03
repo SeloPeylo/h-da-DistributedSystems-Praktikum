@@ -2,20 +2,10 @@ package Sensors;
 import java.net.*;
 
 public class HumiditySensor extends Sensor {
+    private static int created = 1;
 
     public HumiditySensor() throws UnknownHostException
-    { super(); this.sensorName = "Humidity-Sensor";}
-
-    public HumiditySensor(InetAddress address, int port) throws SocketException
-    { super(address, port); this.sensorName = "Humidity-Sensor"; }
-
-    public HumiditySensor(InetAddress address) throws SocketException
-    { super(address); this.sensorName = "Humidity-Sensor"; }
-
-    @Override
-    public void run() {
-        super.run();
-    }
+    { super(); this.sensorName = "Humidity-Sensor " + created; created++;}
 
     @Override
     protected String measure()

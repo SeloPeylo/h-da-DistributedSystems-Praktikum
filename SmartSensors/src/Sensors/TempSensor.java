@@ -2,20 +2,10 @@ package Sensors;
 import java.net.*;
 
 public class TempSensor extends Sensor {
+    private static int created = 1;
 
     public TempSensor() throws UnknownHostException
-    { super(); this.sensorName = "Temp-Sensor"; }
-
-    public TempSensor(InetAddress address, int port) throws SocketException
-    { super(address, port); this.sensorName = "Temp-Sensor"; }
-
-    public TempSensor(InetAddress address) throws SocketException
-    { super(address); this.sensorName = "Temp-Sensor"; }
-
-    @Override
-    public void run() {
-        super.run();
-    }
+    { super(); this.sensorName = "Temp-Sensor " + created; created++; }
 
     @Override
     protected String measure()

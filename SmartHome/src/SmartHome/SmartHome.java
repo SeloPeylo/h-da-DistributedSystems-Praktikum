@@ -6,6 +6,7 @@ import java.net.*;
 public class SmartHome implements Runnable{
 
     private DatagramPacket packet = null;
+    private static int packagesReceived = 0;
 
     public SmartHome(DatagramPacket packet)
     {
@@ -16,18 +17,21 @@ public class SmartHome implements Runnable{
     {
         if(packet != null)
         {
+            packagesReceived++;
             String message = new String(packet.getData());
-            System.out.println("Message from "
-                    + packet.getAddress()
-                    + " Port "
-                    + packet.getPort()
-                    + " Message: " + message);
+            System.out.printf("Message #%d from %s Port %d Message: %s\n",
+                    packagesReceived,
+                    packet.getAddress(),
+                    packet.getPort(),
+                    message);
         }
     }
 
     public static void main(String[] args) {
+
         // write your code here
         System.out.println("Starting Smart-Home-Central");
+
 
         int port;
         if(args.length == 0)

@@ -2,19 +2,10 @@ package Sensors;
 import java.net.*;
 
 public class BathSensor extends Sensor {
+    private static int created = 1;
+
     public BathSensor() throws UnknownHostException
-    { super(); this.sensorName = "Bath-Sensor"; }
-
-    public BathSensor(InetAddress address, int port) throws SocketException
-    { super(address, port); this.sensorName = "Bath-Sensor";}
-
-    public BathSensor(InetAddress address) throws SocketException
-    { super(address); this.sensorName = "Bath-Sensor";}
-
-    @Override
-    public void run() {
-        super.run();
-    }
+    { super(); this.sensorName = "Bath-Sensor " + created; created++; }
 
     @Override
     protected String measure()
