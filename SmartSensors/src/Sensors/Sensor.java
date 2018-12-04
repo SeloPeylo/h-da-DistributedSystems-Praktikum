@@ -32,7 +32,7 @@ import java.net.*;
         if(socket == null)
         {
             try {
-                socket = new DatagramSocket(port);
+                socket = new DatagramSocket(port+1);
             } catch(SocketException se) {se.printStackTrace();}
         }
         this.message = "testsensor: testdata";
@@ -52,7 +52,7 @@ import java.net.*;
              try {
                  socket.disconnect();
                  socket.close();
-                 socket = new DatagramSocket(port);
+                 socket = new DatagramSocket(port+1);
              } catch(SocketException se) {se.printStackTrace();}
          }
      }

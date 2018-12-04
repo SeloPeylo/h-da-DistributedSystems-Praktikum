@@ -6,18 +6,19 @@ import java.net.*;
 public class SmartHome implements Runnable{
 
     private DatagramPacket packet = null;
+    private int messagenr;
     private static int packagesReceived = 0;
 
-    public SmartHome(DatagramPacket packet)
+    public SmartHome(DatagramPacket packet, int messagenr)
     {
         this.packet = packet;
+        this.messagenr = messagenr;
     }
 
     public void run()
     {
         if(packet != null)
         {
-            packagesReceived++;
             String message = new String(packet.getData());
             System.out.printf("Message #%d from %s Port %d Message: %s\n",
                     packagesReceived,
@@ -30,14 +31,17 @@ public class SmartHome implements Runnable{
     public static void main(String[] args) {
 
         // write your code here
+        int port = 9876;
+
         System.out.println("Starting Smart-Home-Central");
-
-
-        int port;
-        if(args.length == 0)
-        { port = 9876;
-        } else { port = Integer.parseInt(args[0]); }
-
+        for(int i=0; i<args.length; i++)
+        {
+            if (args[i].contains("port=")){
+                String str = args[i];
+                str.replace("port=", "");
+                port = Integer.parseInt(str);
+            }
+        }
         DatagramSocket socket = null;
         try{
             socket = new DatagramSocket(port);
@@ -50,7 +54,8 @@ public class SmartHome implements Runnable{
 
             try {
                 socket.receive(packet);
-                new Thread(new SmartHome(packet)).start();
+                packagesReceived++;
+                new Thread(new SmartHome(packet, packagesReceived)).start();
             } catch (IOException io) {io.printStackTrace();}
         }
     }
