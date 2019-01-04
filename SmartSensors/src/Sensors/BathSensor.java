@@ -11,6 +11,7 @@ public class BathSensor extends Sensor {
     protected String measure()
     {
         int measurement = super.random.nextInt() % 8000;
+        measurement = Math.abs(measurement);
         String message = "BathSensor RPM: " + measurement;
         return message;
     }

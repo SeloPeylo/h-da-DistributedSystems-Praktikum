@@ -10,7 +10,7 @@ public class TempSensor extends Sensor {
     @Override
     protected String measure()
     {
-        float measurement = (-1500f + (super.random.nextInt() % 6000)) / 100 ; //-15 to 45 degrees
+        float measurement = (-1500f + (Math.abs(super.random.nextInt()) % 6000)) / 100 ; //-15 to 45 degrees
         String message = "TempSensor Degrees: " + measurement;
         return message;
     }

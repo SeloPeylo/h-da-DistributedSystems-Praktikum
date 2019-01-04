@@ -8,23 +8,26 @@ public class SmartHome implements Runnable{
     private DatagramPacket packet = null;
     private int messagenr;
     private static int packagesReceived = 0;
+    private SensorData sensorData;
 
-    public SmartHome(DatagramPacket packet, int messagenr)
+    public SmartHome(DatagramPacket packet, int messagenr, SensorData sensorData)
     {
         this.packet = packet;
         this.messagenr = messagenr;
+        this.sensorData = sensorData;
     }
 
     public void run()
     {
         if(packet != null)
         {
-            String message = new String(packet.getData());
-            System.out.printf("Message #%d from %s Port %d Message: %s\n",
-                    packagesReceived,
-                    packet.getAddress(),
-                    packet.getPort(),
-                    message);
+            String data = new String(packet.getData());
+            String message = "Message #" + packagesReceived +
+                    " from " + packet.getAddress() +
+                    " Port " + packet.getPort() +
+                    " Message: " + data;
+            System.out.println(message);
+            sensorData.addData(message);
         }
     }
 
@@ -32,6 +35,7 @@ public class SmartHome implements Runnable{
 
         // write your code here
         int port = 9876;
+        SensorData sensorData = new SensorData();
 
         System.out.println("Starting Smart-Home-Central");
         for(int i=0; i<args.length; i++)
@@ -55,7 +59,7 @@ public class SmartHome implements Runnable{
             try {
                 socket.receive(packet);
                 packagesReceived++;
-                new Thread(new SmartHome(packet, packagesReceived)).start();
+                new Thread(new SmartHome(packet, packagesReceived, sensorData)).start();
             } catch (IOException io) {io.printStackTrace();}
         }
     }
