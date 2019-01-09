@@ -1,5 +1,7 @@
 package Sensors;
 import java.net.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class WindowSensor extends Sensor {
     private static int created = 1;
@@ -11,7 +13,9 @@ public class WindowSensor extends Sensor {
     protected String measure()
     {
         boolean measurement = super.random.nextBoolean();
-        String message = "WindowSensor IsOpen: " + measurement;
+        String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+        String message = timeStamp
+                + " WindowSensor IsOpen: " + measurement;
         return message;
     }
 }

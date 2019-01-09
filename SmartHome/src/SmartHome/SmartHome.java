@@ -1,5 +1,10 @@
 package SmartHome;
 
+/*
+ * The Smart Home receives the SensorData and saves the History in a Producer Consumer Pattern
+ * It also has a HTML Webserver which is REST capable and where you can receive the data
+ */
+
 import java.io.IOException;
 import java.net.*;
 
@@ -22,33 +27,38 @@ public class SmartHome implements Runnable{
         if(packet != null)
         {
             String data = new String(packet.getData());
-            String message = "Message #" + packagesReceived +
-                    " from " + packet.getAddress() +
+            String message = "Message from " + packet.getAddress() +
                     " Port " + packet.getPort() +
                     " Message: " + data;
+            data = packet.getAddress() + " " + data;
             System.out.println(message);
-            sensorData.addData(message);
+            sensorData.addData(data);
         }
     }
 
     public static void main(String[] args) {
 
         // write your code here
-        int port = 9876;
+        int listeningPort = 9876;
         SensorData sensorData = new SensorData();
 
         System.out.println("Starting Smart-Home-Central");
+
+        HttpServer webServer = new HttpServer(sensorData);
+        new Thread(sensorData).start();
+        new Thread(webServer).start();
+
         for(int i=0; i<args.length; i++)
         {
             if (args[i].contains("port=")){
                 String str = args[i];
                 str.replace("port=", "");
-                port = Integer.parseInt(str);
+                listeningPort = Integer.parseInt(str);
             }
         }
         DatagramSocket socket = null;
         try{
-            socket = new DatagramSocket(port);
+            socket = new DatagramSocket(listeningPort);
         } catch(SocketException se) {se.printStackTrace(); System.exit(1);}
 
         while(true)

@@ -1,5 +1,7 @@
 package Sensors;
 import java.net.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class HumiditySensor extends Sensor {
     private static int created = 1;
@@ -12,7 +14,9 @@ public class HumiditySensor extends Sensor {
     {
         float measurement = (super.random.nextInt() % 10000) / 100f;
         measurement = Math.abs(measurement);
-        String message = "HumiditySensor Percent: " + measurement;
+        String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+        String message = timeStamp +
+                " HumiditySensor Percent: " + measurement;
         return message;
     }
 }
