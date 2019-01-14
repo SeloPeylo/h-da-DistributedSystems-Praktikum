@@ -5,6 +5,9 @@
  * It also has a HTML Webserver which is REST capable and where you can receive the data
  */
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -28,12 +31,24 @@ public class SmartHome implements Runnable{
     {
         if(packet != null)
         {
-            String data = new String(packet.getData());
+            String receivedData = new String(packet.getData());
             String message = "Message from " + packet.getAddress() +
                     " Port " + packet.getPort() +
-                    " Message: " + data;
-            data = packet.getAddress() + " " + data;
+                    " Message: " + receivedData;
             System.out.println(message);
+            String split[] = receivedData.split(" ");
+            JSONObject data = new JSONObject();
+            try
+            {
+                data.put("Address", packet.getAddress());
+                data.put("Port", packet.getPort());
+                data.put("Time", split[0]);
+                data.put("Sensortype", split[1]);
+                data.put("Message", (split[2] + " " + split[3]));
+                data.put("Value", split[3]);
+            } catch(JSONException jex) {jex.printStackTrace();}
+
+
             sensorData.addData(data);
         }
     }
@@ -47,7 +62,6 @@ public class SmartHome implements Runnable{
         System.out.println("Starting Smart-Home-Central");
 
         HttpServer webServer = new HttpServer(sensorData);
-        new Thread(sensorData).start();
         new Thread(webServer).start();
 
         for(int i=0; i<args.length; i++)

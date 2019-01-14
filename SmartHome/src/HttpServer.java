@@ -1,3 +1,6 @@
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
@@ -54,16 +57,16 @@ public class HttpServer implements Runnable{
                 htmlPage(connectionSocket, out, indexPage());
                 break;
             case "GET /Bath HTTP/1.1":
-                htmlPage(connectionSocket, out, sensorPage("Bath"));
+                htmlPage(connectionSocket, out, sensorPage("BathSensor"));
                 break;
             case "GET /Humidity HTTP/1.1":
-                htmlPage(connectionSocket, out, sensorPage("Humidity"));
+                htmlPage(connectionSocket, out, sensorPage("HumiditySensor"));
                 break;
             case "GET /Temp HTTP/1.1":
-                htmlPage(connectionSocket, out, sensorPage("Temp"));
+                htmlPage(connectionSocket, out, sensorPage("TempSensor"));
                 break;
             case "GET /Window HTTP/1.1":
-                htmlPage(connectionSocket, out, sensorPage("Window"));
+                htmlPage(connectionSocket, out, sensorPage("WindowSensor"));
                 break; /*
             case "GET /Weather HTTP/1.1":
                 htmlPage(connectionSocket, out, weatherPage());
@@ -109,20 +112,28 @@ public class HttpServer implements Runnable{
 
     public String sensorPage(String sensorType){
         String tableContent = "";
-        Vector<String> data = sensorData.getCopy(sensorType);
+        Vector<JSONObject> dataList = sensorData.getFilteredList(sensorType);
         int index;
         String ksub;
-        for(String k: data)
-        {
-            index = k.indexOf(' ');
-            ksub = k.substring(index);
-            k = k.substring(0, index);
 
-            tableContent += ""
-                    + "<tr>"
-                    + "<td style=\"width: 100px;\">&nbsp;" + k + "</td>"
-                    + "<td style=\"width: 450px;\">&nbsp;" + ksub + "</td>"
-                    + "</tr>";
+        tableContent += ""
+                + "<tr>"
+                + "<td style=\"width: 100px;\">&nbsp;" + "Address" + "</td>"
+                + "<td style=\"width: 200px;\">&nbsp;" + "Port" + "</td>"
+                + "<td style=\"width: 300px;\">&nbsp;" + "Time" + "</td>"
+                + "<td style=\"width: 450px;\">&nbsp;" + "Message" + "</td>"
+                + "</tr>";
+        for(JSONObject k: dataList)
+        {
+            try{
+                tableContent += ""
+                        + "<tr>"
+                        + "<td style=\"width: 100px;\">&nbsp;" + k.get("Address") + "</td>"
+                        + "<td style=\"width: 200px;\">&nbsp;" + k.get("Port") + "</td>"
+                        + "<td style=\"width: 300px;\">&nbsp;" + k.get("Time") + "</td>"
+                        + "<td style=\"width: 450px;\">&nbsp;" + k.get("Message") + "</td>"
+                        + "</tr>";
+            } catch(JSONException jex) {jex.printStackTrace();}
         }
 
         String htmlCode = ""
