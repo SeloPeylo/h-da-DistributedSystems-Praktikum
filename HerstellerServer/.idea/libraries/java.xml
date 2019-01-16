@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="java">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src/org.eclipse.paho.client.mqttv3/src/main/java" />
+      <root url="file://$PROJECT_DIR$/src/org.eclipse.paho.client.mqttv3/src/main/java-templates" />
+    </SOURCES>
+  </library>
+</component>

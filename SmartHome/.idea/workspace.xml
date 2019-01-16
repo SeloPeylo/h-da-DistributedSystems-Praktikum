@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="17f1aed7-4212-4f25-88f0-92cb020d1b51" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../HerstellerServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HerstellerServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartHome.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SmartHome.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHome/HttpServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHome/HttpServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHome/SensorData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHome/SensorData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHome/SmartHome.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHome/SmartHome.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HttpServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SensorData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SensorData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SmartHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SmartHome.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SmartSensors/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartSensors/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -46,7 +38,7 @@
     <session id="55310097">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.opened" value="2" />
         </counts>
@@ -139,7 +131,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="width" value="817" />
     <option name="height" value="1047" />
@@ -176,7 +168,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Selim/IdeaProjects/group_d_8/SmartHome/src/SmartHome.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547483768737" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547498269893" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/java-json.jar!/" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
@@ -220,12 +212,12 @@
       <updated>1547463779892</updated>
       <workItem from="1547463782639" duration="101000" />
       <workItem from="1547464146839" duration="11184000" />
-      <workItem from="1547481720493" duration="2041000" />
+      <workItem from="1547481720493" duration="2604000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13326000" />
+    <option name="totallyTimeSpent" value="13889000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -237,11 +229,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49838188" visible="true" weight="0.09541578" />
-      <window_info id="Structure" order="1" sideWeight="0.50161815" side_tool="true" visible="true" weight="0.09541578" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989154" visible="true" weight="0.09541578" />
+      <window_info id="Structure" order="1" sideWeight="0.5010846" side_tool="true" visible="true" weight="0.09541578" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -249,7 +240,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
