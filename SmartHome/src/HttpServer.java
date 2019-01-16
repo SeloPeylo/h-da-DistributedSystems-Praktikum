@@ -8,29 +8,31 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Vector;
 
-public class HttpServer implements Runnable{
+public class HttpServer implements Runnable {
 
     private ServerSocket serverSocket;
     SensorData sensorData;
     private boolean running;
 
-    public HttpServer(SensorData sensorData)
-    {
-        try{
+    public HttpServer(SensorData sensorData) {
+        try {
             this.serverSocket = new ServerSocket(8080);
-        this.sensorData = sensorData;
-        this.running = true;
-        System.out.println("HTML-Server IP = " + serverSocket.getLocalSocketAddress());
-        } catch (Exception ex) {ex.printStackTrace();}
+            this.sensorData = sensorData;
+            this.running = true;
+            System.out.println("HTML-Server IP = " + serverSocket.getLocalSocketAddress());
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 
     @Override
     public void run() {
-        while(running)
-        {
+        while (running) {
             try {
                 startWebserver();
-            } catch(Exception ex){ex.printStackTrace();}
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
         }
     }
 
@@ -95,7 +97,7 @@ public class HttpServer implements Runnable{
         connectionSocket.close();
     }
 
-    public String indexPage(){
+    public String indexPage() {
 
         String htmlCode = ""
                 + "<h3>Willkommen zur Smart Home Zentrale</h3>"
@@ -110,7 +112,7 @@ public class HttpServer implements Runnable{
         return htmlCode;
     }
 
-    public String sensorPage(String sensorType){
+    public String sensorPage(String sensorType) {
         String tableContent = "";
         Vector<JSONObject> dataList = sensorData.getFilteredList(sensorType);
         int index;
@@ -123,9 +125,8 @@ public class HttpServer implements Runnable{
                 + "<td style=\"width: 300px;\">&nbsp;" + "Time" + "</td>"
                 + "<td style=\"width: 450px;\">&nbsp;" + "Message" + "</td>"
                 + "</tr>";
-        for(JSONObject k: dataList)
-        {
-            try{
+        for (JSONObject k : dataList) {
+            try {
                 tableContent += ""
                         + "<tr>"
                         + "<td style=\"width: 100px;\">&nbsp;" + k.get("Address") + "</td>"
@@ -133,7 +134,9 @@ public class HttpServer implements Runnable{
                         + "<td style=\"width: 300px;\">&nbsp;" + k.get("Time") + "</td>"
                         + "<td style=\"width: 450px;\">&nbsp;" + k.get("Message") + "</td>"
                         + "</tr>";
-            } catch(JSONException jex) {jex.printStackTrace();}
+            } catch (JSONException jex) {
+                jex.printStackTrace();
+            }
         }
 
         String htmlCode = ""
@@ -147,7 +150,7 @@ public class HttpServer implements Runnable{
         return htmlCode;
     }
 
-    public String pageNotFound(){
+    public String pageNotFound() {
         String htmlCode = "<h1>404 Page not found</h1>\n";
         return htmlCode;
     }

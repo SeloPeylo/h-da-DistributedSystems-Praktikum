@@ -5,11 +5,11 @@ import org.json.JSONObject;
 public class HerstellerServer {
 
 
-    public void main(String[] args) throws MqttException
-    {
+    public void main(String[] args) throws MqttException {
 
-        MqttClient client=new MqttClient("tcp://localhost:1883", MqttClient.generateClientId());
-        client.setCallback( new SimpleMqttCallBack() );
+
+        MqttClient client = new MqttClient("tcp://localhost:1883", MqttClient.generateClientId());
+        client.setCallback(new SimpleMqttCallBack());
         client.connect();
 
 
@@ -22,7 +22,7 @@ public class HerstellerServer {
         }
 
         public void messageArrived(String s, MqttMessage mqttMessage) throws Exception {
-            System.out.println("Message received:\n\t"+ new String(mqttMessage.getPayload()) );
+            System.out.println("Message received:\n\t" + new String(mqttMessage.getPayload()));
         }
 
         public void deliveryComplete(IMqttDeliveryToken iMqttDeliveryToken) {

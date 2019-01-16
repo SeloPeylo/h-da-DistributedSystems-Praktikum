@@ -13,24 +13,21 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.SocketException;
 
-public class SmartHome implements Runnable{
+public class SmartHome implements Runnable {
 
     private DatagramPacket packet = null;
     private int messagenr;
     private static int packagesReceived = 0;
     private SensorData sensorData;
 
-    public SmartHome(DatagramPacket packet, int messagenr, SensorData sensorData)
-    {
+    public SmartHome(DatagramPacket packet, int messagenr, SensorData sensorData) {
         this.packet = packet;
         this.messagenr = messagenr;
         this.sensorData = sensorData;
     }
 
-    public void run()
-    {
-        if(packet != null)
-        {
+    public void run() {
+        if (packet != null) {
             String receivedData = new String(packet.getData());
             String message = "Message from " + packet.getAddress() +
                     " Port " + packet.getPort() +
@@ -38,15 +35,16 @@ public class SmartHome implements Runnable{
             System.out.println(message);
             String split[] = receivedData.split(" ");
             JSONObject data = new JSONObject();
-            try
-            {
+            try {
                 data.put("Address", packet.getAddress());
                 data.put("Port", packet.getPort());
                 data.put("Time", split[0]);
                 data.put("Sensortype", split[1]);
                 data.put("Message", (split[2] + " " + split[3]));
                 data.put("Value", split[3]);
-            } catch(JSONException jex) {jex.printStackTrace();}
+            } catch (JSONException jex) {
+                jex.printStackTrace();
+            }
 
 
             sensorData.addData(data);
@@ -64,21 +62,22 @@ public class SmartHome implements Runnable{
         HttpServer webServer = new HttpServer(sensorData);
         new Thread(webServer).start();
 
-        for(int i=0; i<args.length; i++)
-        {
-            if (args[i].contains("port=")){
+        for (int i = 0; i < args.length; i++) {
+            if (args[i].contains("port=")) {
                 String str = args[i];
                 str.replace("port=", "");
                 listeningPort = Integer.parseInt(str);
             }
         }
         DatagramSocket socket = null;
-        try{
+        try {
             socket = new DatagramSocket(listeningPort);
-        } catch(SocketException se) {se.printStackTrace(); System.exit(1);}
+        } catch (SocketException se) {
+            se.printStackTrace();
+            System.exit(1);
+        }
 
-        while(true)
-        {
+        while (true) {
             byte[] buf = new byte[256];
             DatagramPacket packet = new DatagramPacket(buf, buf.length);
 
@@ -86,7 +85,9 @@ public class SmartHome implements Runnable{
                 socket.receive(packet);
                 packagesReceived++;
                 new Thread(new SmartHome(packet, packagesReceived, sensorData)).start();
-            } catch (IOException io) {io.printStackTrace();}
+            } catch (IOException io) {
+                io.printStackTrace();
+            }
         }
     }
 }
