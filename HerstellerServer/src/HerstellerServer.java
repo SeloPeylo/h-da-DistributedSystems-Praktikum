@@ -5,11 +5,11 @@ import org.json.JSONObject;
 public class HerstellerServer {
 
 
-    public void main(String[] args) throws MqttException {
+    public static void main(String[] args) throws MqttException {
 
 
         MqttClient client = new MqttClient("tcp://localhost:1883", MqttClient.generateClientId());
-        client.setCallback(new SimpleMqttCallBack());
+        //client.setCallback(new SimpleMqttCallBack());
         client.connect();
 
 

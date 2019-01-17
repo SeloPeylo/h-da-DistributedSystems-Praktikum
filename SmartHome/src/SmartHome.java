@@ -58,6 +58,7 @@ public class SmartHome implements Runnable {
         SensorData sensorData = new SensorData();
 
         System.out.println("Starting Smart-Home-Central");
+        String[] serverURL = {"tcp://localhost:1884", "tcp://localhost:1885", "tcp://localhost:1886"};
 
         HttpServer webServer = new HttpServer(sensorData);
         new Thread(webServer).start();

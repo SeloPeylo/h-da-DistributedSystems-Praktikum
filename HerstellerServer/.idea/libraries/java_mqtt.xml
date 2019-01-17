@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="java-mqtt">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/java-mqtt.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
