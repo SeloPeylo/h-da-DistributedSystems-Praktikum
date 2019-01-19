@@ -1,32 +1,20 @@
 import org.eclipse.paho.client.mqttv3.*;
-import org.json.JSONException;
-import org.json.JSONObject;
 
-public class HerstellerServer {
+class HerstellerServer {
 
 
     public static void main(String[] args) throws MqttException {
 
+        String port = "1884";
+        if (args.length > 0) {
+            port = args[0];
+        }
 
-        MqttClient client = new MqttClient("tcp://localhost:1883", MqttClient.generateClientId());
-        //client.setCallback(new SimpleMqttCallBack());
+        MqttClient client = new MqttClient(("tcp://localhost:" + port), MqttClient.generateClientId());
+        client.setCallback(new SimpleMqttCallBack());
         client.connect();
 
 
     }
 
-    public class SimpleMqttCallBack implements MqttCallback {
-
-        public void connectionLost(Throwable throwable) {
-            System.out.println("Connection to MQTT broker lost!");
-        }
-
-        public void messageArrived(String s, MqttMessage mqttMessage) throws Exception {
-            System.out.println("Message received:\n\t" + new String(mqttMessage.getPayload()));
-        }
-
-        public void deliveryComplete(IMqttDeliveryToken iMqttDeliveryToken) {
-            // not used in this example
-        }
-    }
 }
