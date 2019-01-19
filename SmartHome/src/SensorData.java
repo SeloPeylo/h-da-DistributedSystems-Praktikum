@@ -8,18 +8,17 @@ public class SensorData {
 
     private static Vector<JSONObject> dataList = new Vector<>();
     private MqttPublisher publisher;
-    private String[] serverList = {"tcp://localhost:1884", "tcp://localhost:1885", "tcp://localhost:1886"};
+    private byte[] payload = null;
 
-    public SensorData() {
-        publisher = new MqttPublisher(serverList);
-        publisher.run();
+    public SensorData(MqttPublisher publisher) {
+        this.publisher = publisher;
     }
 
     public void addData(JSONObject data) {
         dataList.add(data);
-        byte[] payload = String.valueOf(data).getBytes();
-        publisher.setPayload(payload);
-
+        payload = String.valueOf(data).getBytes();
+        publisher.putMessage(payload);
+        new Thread(publisher).start();
     }
 
     public Vector<JSONObject> getFilteredList(String key) {

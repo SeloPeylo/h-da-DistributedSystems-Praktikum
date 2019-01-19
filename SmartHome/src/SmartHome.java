@@ -57,7 +57,8 @@ public class SmartHome implements Runnable {
         System.out.println("Starting Smart-Home-Central");
         String[] serverURL = {"tcp://localhost:1884", "tcp://localhost:1885", "tcp://localhost:1886"};
 
-        SensorData sensorData = new SensorData();
+        MqttPublisher publisher = new MqttPublisher();
+        SensorData sensorData = new SensorData(publisher);
         HttpServer webServer = new HttpServer(sensorData);
         new Thread(webServer).start();
 
@@ -71,14 +72,14 @@ public class SmartHome implements Runnable {
         DatagramSocket socket = null;
         try {
             socket = new DatagramSocket(listeningPort);
-            socket.connect(InetAddress.getLocalHost(), listeningPort);
-            System.out.println("Socket Address: " + socket.getInetAddress().getHostAddress());
+            //socket.connect(InetAddress.getLocalHost(), listeningPort);
+            //System.out.println("Socket Address: " + socket.getInetAddress().getHostAddress());
         } catch (SocketException se) {
             se.printStackTrace();
             System.exit(1);
-        } catch (UnknownHostException uhe) {
+        } /*catch (UnknownHostException uhe) {
             uhe.printStackTrace();
-        }
+        }*/
         while (true) {
             byte[] buf = new byte[256];
             DatagramPacket packet = new DatagramPacket(buf, buf.length);
@@ -86,8 +87,7 @@ public class SmartHome implements Runnable {
             try {
                 socket.receive(packet);
                 packagesReceived++;
-                Thread t = new Thread(new SmartHome(packet, packagesReceived, sensorData));
-                t.start();
+                new Thread(new SmartHome(packet, packagesReceived, sensorData)).start();
             } catch (IOException io) {
                 io.printStackTrace();
             }

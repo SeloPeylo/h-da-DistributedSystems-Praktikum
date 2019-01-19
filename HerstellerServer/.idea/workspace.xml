@@ -5,136 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="240f2311-9a82-46fe-9f3b-2ead5324f2ed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/.settings/org.eclipse.pde.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/build.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/build.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/logging/jsr47min.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/logging/package.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/package.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/persist/package.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/util/package.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/src/main/resources/bundle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/src/main/resources/org/eclipse/paho/client/mqttv3/internal/nls/logcat.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/src/main/resources/org/eclipse/paho/client/mqttv3/internal/nls/messages.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/src/main/resources/org/eclipse/paho/client/mqttv3/internal/nls/messages_cs.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/src/main/resources/org/eclipse/paho/client/mqttv3/internal/nls/messages_de.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/src/main/resources/org/eclipse/paho/client/mqttv3/internal/nls/messages_es.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/src/main/resources/org/eclipse/paho/client/mqttv3/internal/nls/messages_fr.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/src/main/resources/org/eclipse/paho/client/mqttv3/internal/nls/messages_hu.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/src/main/resources/org/eclipse/paho/client/mqttv3/internal/nls/messages_it.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/src/main/resources/org/eclipse/paho/client/mqttv3/internal/nls/messages_ja.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/src/main/resources/org/eclipse/paho/client/mqttv3/internal/nls/messages_ko.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/src/main/resources/org/eclipse/paho/client/mqttv3/internal/nls/messages_pl.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/src/main/resources/org/eclipse/paho/client/mqttv3/internal/nls/messages_pt_BR.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/src/main/resources/org/eclipse/paho/client/mqttv3/internal/nls/messages_ru.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/src/main/resources/org/eclipse/paho/client/mqttv3/internal/nls/messages_zh_CN.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org.eclipse.paho.client.mqttv3/src/main/resources/org/eclipse/paho/client/mqttv3/internal/nls/messages_zh_TW.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/BufferedMessage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/DisconnectedBufferOptions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/IMqttActionListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/IMqttAsyncClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/IMqttClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/IMqttDeliveryToken.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/IMqttMessageListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/IMqttToken.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/MqttAsyncClient$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/MqttAsyncClient$MqttReconnectActionListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/MqttAsyncClient$MqttReconnectCallback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/MqttAsyncClient$ReconnectTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/MqttAsyncClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/MqttCallback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/MqttCallbackExtended.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/MqttClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/MqttClientPersistence.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/MqttConnectOptions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/MqttDeliveryToken.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/MqttException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/MqttMessage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/MqttPersistable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/MqttPersistenceException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/MqttPingSender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/MqttSecurityException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/MqttToken.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/MqttTopic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/ScheduledExecutorPingSender$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/ScheduledExecutorPingSender$PingRunnable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/ScheduledExecutorPingSender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/TimerPingSender$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/TimerPingSender$PingTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/TimerPingSender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/ClientComms$ConnectBG.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/ClientComms$DisconnectBG.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/ClientComms$ReconnectDisconnectedBufferCallback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/ClientComms.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/ClientDefaults.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/ClientState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/CommsCallback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/CommsReceiver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/CommsSender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/CommsTokenStore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/DestinationProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/DisconnectedMessageBuffer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/IDisconnectedBufferCallback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/MessageCatalog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/MqttPersistentData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/NetworkModule.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/ResourceBundleCatalog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/SSLNetworkModule.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/TCPNetworkModule.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/Token.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/security/SimpleBase64Encoder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/websocket/Base64$Base64Encoder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/websocket/Base64.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/websocket/HandshakeFailedException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/websocket/WebSocketHandshake.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/wire/MqttAck.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/wire/MqttConnack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/wire/MqttConnect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/wire/MqttDisconnect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/wire/MqttInputStream.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/wire/MqttOutputStream.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/wire/MqttPersistableWireMessage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/wire/MqttPingReq.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/wire/MqttPingResp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/wire/MqttPubAck.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/wire/MqttPubRec.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/wire/MqttPubRel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/wire/MqttPublish.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/wire/MqttSubscribe.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/wire/MqttUnsubscribe.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/wire/MqttWireMessage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/wire/MultiByteArrayInputStream.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/internal/wire/MultiByteInteger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/logging/JSR47Logger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/logging/Logger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/persist/PersistanceFileFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/persist/PersistanceFileNameFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/util/Debug.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/org/eclipse/paho/client/mqttv3/util/Strings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartHome/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartHome/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SmartHome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartHome/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartHome/out/production/SmartHome/HttpServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartHome/out/production/SmartHome/HttpServer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SmartHome/out/production/SmartHome/MqttPublisher.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartHome/out/production/SmartHome/MqttPublisher.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SmartHome/out/production/SmartHome/SensorData.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartHome/out/production/SmartHome/SensorData.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SmartHome/out/production/SmartHome/SmartHome.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartHome/out/production/SmartHome/SmartHome.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SmartHome/src/MqttPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartHome/src/MqttPublisher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SmartHome/src/SensorData.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartHome/src/SensorData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SmartHome/src/SmartHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartHome/src/SmartHome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartSensors/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartSensors/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SmartSensors/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartSensors/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartSensors/out/production/SmartSensors/BathSensor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartSensors/out/production/SmartSensors/BathSensor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartSensors/out/production/SmartSensors/HumiditySensor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartSensors/out/production/SmartSensors/HumiditySensor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SmartSensors/out/production/SmartSensors/Sensor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartSensors/out/production/SmartSensors/Sensor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartSensors/out/production/SmartSensors/TempSensor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartSensors/out/production/SmartSensors/TempSensor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartSensors/out/production/SmartSensors/WindowSensor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartSensors/out/production/SmartSensors/WindowSensor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartSensors/src/Sensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartSensors/src/Sensor.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -149,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/src/HerstellerServer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
-              <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -158,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/src/SimpleMqttCallBack.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -223,7 +103,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547923913519" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547937287828" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../SmartHome" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -337,7 +217,7 @@
     <entry file="file://$PROJECT_DIR$/src/SimpleMqttCallBack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -347,7 +227,7 @@
     <entry file="file://$PROJECT_DIR$/src/HerstellerServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
-          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
         </state>
       </provider>
     </entry>
