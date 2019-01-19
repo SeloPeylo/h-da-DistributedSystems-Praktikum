@@ -53,11 +53,11 @@ public class SmartHome implements Runnable {
 
         // write your code here
         int listeningPort = 9876;
-        SensorData sensorData = new SensorData();
 
         System.out.println("Starting Smart-Home-Central");
         String[] serverURL = {"tcp://localhost:1884", "tcp://localhost:1885", "tcp://localhost:1886"};
 
+        SensorData sensorData = new SensorData();
         HttpServer webServer = new HttpServer(sensorData);
         new Thread(webServer).start();
 
@@ -86,7 +86,8 @@ public class SmartHome implements Runnable {
             try {
                 socket.receive(packet);
                 packagesReceived++;
-                new Thread(new SmartHome(packet, packagesReceived, sensorData)).start();
+                Thread t = new Thread(new SmartHome(packet, packagesReceived, sensorData));
+                t.start();
             } catch (IOException io) {
                 io.printStackTrace();
             }

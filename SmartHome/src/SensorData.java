@@ -11,13 +11,14 @@ public class SensorData {
     private String[] serverList = {"tcp://localhost:1884", "tcp://localhost:1885", "tcp://localhost:1886"};
 
     public SensorData() {
+        publisher = new MqttPublisher(serverList);
+        publisher.run();
     }
 
     public void addData(JSONObject data) {
         dataList.add(data);
         byte[] payload = String.valueOf(data).getBytes();
-        publisher = new MqttPublisher(serverList, payload);
-        publisher.run();
+        publisher.setPayload(payload);
 
     }
 
