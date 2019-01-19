@@ -9,9 +9,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.net.DatagramPacket;
-import java.net.DatagramSocket;
-import java.net.SocketException;
+import java.net.*;
 
 public class SmartHome implements Runnable {
 
@@ -73,11 +71,14 @@ public class SmartHome implements Runnable {
         DatagramSocket socket = null;
         try {
             socket = new DatagramSocket(listeningPort);
+            socket.connect(InetAddress.getLocalHost(), listeningPort);
+            System.out.println("Socket Address: " + socket.getInetAddress().getHostAddress());
         } catch (SocketException se) {
             se.printStackTrace();
             System.exit(1);
+        } catch (UnknownHostException uhe) {
+            uhe.printStackTrace();
         }
-
         while (true) {
             byte[] buf = new byte[256];
             DatagramPacket packet = new DatagramPacket(buf, buf.length);
