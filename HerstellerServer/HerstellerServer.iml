@@ -10,5 +10,6 @@
     <orderEntry type="library" name="org.eclipse.paho.client.mqttv3-1.2.0" level="application" />
     <orderEntry type="library" name="java-mqtt" level="project" />
     <orderEntry type="library" name="java-json" level="project" />
+    <orderEntry type="library" name="org.jooq:jooq-codegen-maven:3.6.1" level="project" />
   </component>
 </module>

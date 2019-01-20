@@ -2,7 +2,7 @@ import org.eclipse.paho.client.mqttv3.*;
 
 import java.util.concurrent.Callable;
 
-public class MqttPublisher implements Runnable{
+public class MqttPublisher implements Runnable {
 
     private IMqttClient client = null;
     private String clientID = "publisher1";
@@ -13,6 +13,7 @@ public class MqttPublisher implements Runnable{
         try {
             System.out.println("== Starting MQTT Client ==");
             client = new MqttClient("tcp://iot.eclipse.org:1883", clientID);
+            //client = new MqttClient("tcp://localhost:1884", clientID);
         } catch (MqttException mex) {
             mex.getCause();
         }
@@ -21,18 +22,21 @@ public class MqttPublisher implements Runnable{
     }
 
     public void putMessage(byte[] payload) {
+
         message = new MqttMessage(payload);
     }
 
     @Override
     public void run() {
         try {
-            client.connect();
+            if (!client.isConnected()) {
+                client.connect();
+            }
             message.setRetained(true);
             message.setQos(0);
-            client.publish("sensor_data", message);
+            client.publish("sh_sensor_data", message);
             System.out.println("MQTT Message published!");
-            client.disconnect();
+            //client.disconnect();
         } catch (MqttException mex) {
             mex.getCause();
         }
