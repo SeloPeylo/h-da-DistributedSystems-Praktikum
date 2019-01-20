@@ -14,8 +14,6 @@ public class BathSensor extends Sensor {
         int measurement = super.random.nextInt() % 8000;
         measurement = Math.abs(measurement);
         String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-        String message = timeStamp
-                + " BathSensor RPM: " + measurement;
-        return message;
+        return (timeStamp + " BathSensor RPM: " + measurement);
     }
 }

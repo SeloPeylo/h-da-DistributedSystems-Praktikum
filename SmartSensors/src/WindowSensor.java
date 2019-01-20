@@ -13,8 +13,6 @@ public class WindowSensor extends Sensor {
     {
         boolean measurement = super.random.nextBoolean();
         String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-        String message = timeStamp
-                + " WindowSensor IsOpen: " + measurement;
-        return message;
+        return timeStamp + " WindowSensor IsOpen: " + measurement;
     }
 }

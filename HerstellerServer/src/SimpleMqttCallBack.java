@@ -27,6 +27,8 @@ class SimpleMqttCallBack implements MqttCallback {
             jex.getCause();
         }
         System.out.println("Message received:\n\t" + sensorData.toString());
+
+        new Thread(new Mysqlconnection(sensorData)).start();
     }
 
     public void deliveryComplete(IMqttDeliveryToken iMqttDeliveryToken) {

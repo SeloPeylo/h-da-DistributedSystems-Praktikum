@@ -1,0 +1,730 @@
+[
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49443,
+      "Data": "Fenster: Geschlossen"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49444,
+      "Data": "Fenster: Geoeffnet"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49445,
+      "Data": "Fenster: Geschlossen"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49446,
+      "Data": "Fenster: Geoeffnet"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49447,
+      "Data": "Fenster: Geschlossen"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49448,
+      "Data": "Fenster: Geoeffnet"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49449,
+      "Data": "Fenster: Geschlossen"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49450,
+      "Data": "Fenster: Geschlossen"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49451,
+      "Data": "Fenster: Geschlossen"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49452,
+      "Data": "Fenster: Geoeffnet"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49453,
+      "Data": "Fenster: Geschlossen"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49454,
+      "Data": "Fenster: Geschlossen"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49455,
+      "Data": "LuefterDrehzahl: 159U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49456,
+      "Data": "Fenster: Geschlossen"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49457,
+      "Data": "LuefterDrehzahl: 130U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49458,
+      "Data": "Fenster: Geschlossen"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49459,
+      "Data": "LuefterDrehzahl: 124U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49460,
+      "Data": "Fenster: Geoeffnet"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49461,
+      "Data": "LuefterDrehzahl: 129U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49462,
+      "Data": "Fenster: Geschlossen"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49463,
+      "Data": "LuefterDrehzahl: 186U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49464,
+      "Data": "Fenster: Geoeffnet"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49465,
+      "Data": "LuefterDrehzahl: 163U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49466,
+      "Data": "Fenster: Geoeffnet"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49467,
+      "Data": "LuefterDrehzahl: 112U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49468,
+      "Data": "Fenster: Geoeffnet"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49469,
+      "Data": "LuefterDrehzahl: 143U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49470,
+      "Data": "Fenster: Geoeffnet"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49471,
+      "Data": "LuefterDrehzahl: 173U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49472,
+      "Data": "Fenster: Geschlossen"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49473,
+      "Data": "LuefterDrehzahl: 112U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49474,
+      "Data": "Fenster: Geoeffnet"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49475,
+      "Data": "LuefterDrehzahl: 123U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49476,
+      "Data": "Fenster: Geschlossen"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49477,
+      "Data": "LuefterDrehzahl: 197U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49478,
+      "Data": "Fenster: Geschlossen"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49479,
+      "Data": "LuefterDrehzahl: 172U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49480,
+      "Data": "Fenster: Geoeffnet"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49481,
+      "Data": "LuefterDrehzahl: 191U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49482,
+      "Data": "Fenster: Geoeffnet"
+    }
+  },
+  {
+    "Luftfeuchtigkeit": {
+      "Ip": "/192.168.178.21",
+      "Port": 49483,
+      "Data": "Luftfeuchtigkeit: 9.627962%"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49484,
+      "Data": "LuefterDrehzahl: 125U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49485,
+      "Data": "Fenster: Geoeffnet"
+    }
+  },
+  {
+    "Luftfeuchtigkeit": {
+      "Ip": "/192.168.178.21",
+      "Port": 49486,
+      "Data": "Luftfeuchtigkeit: 1.4265647%"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49487,
+      "Data": "LuefterDrehzahl: 137U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49488,
+      "Data": "Fenster: Geschlossen"
+    }
+  },
+  {
+    "Luftfeuchtigkeit": {
+      "Ip": "/192.168.178.21",
+      "Port": 49489,
+      "Data": "Luftfeuchtigkeit: 12.860952%"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49490,
+      "Data": "LuefterDrehzahl: 118U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49491,
+      "Data": "Fenster: Geoeffnet"
+    }
+  },
+  {
+    "Luftfeuchtigkeit": {
+      "Ip": "/192.168.178.21",
+      "Port": 49492,
+      "Data": "Luftfeuchtigkeit: 2.074188%"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49493,
+      "Data": "LuefterDrehzahl: 162U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49494,
+      "Data": "Fenster: Geoeffnet"
+    }
+  },
+  {
+    "Luftfeuchtigkeit": {
+      "Ip": "/192.168.178.21",
+      "Port": 49495,
+      "Data": "Luftfeuchtigkeit: 17.149464%"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49496,
+      "Data": "LuefterDrehzahl: 164U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49497,
+      "Data": "Fenster: Geoeffnet"
+    }
+  },
+  {
+    "Luftfeuchtigkeit": {
+      "Ip": "/192.168.178.21",
+      "Port": 49498,
+      "Data": "Luftfeuchtigkeit: 4.763712%"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49499,
+      "Data": "LuefterDrehzahl: 156U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49500,
+      "Data": "Fenster: Geoeffnet"
+    }
+  },
+  {
+    "Temparatur": {
+      "Ip": "/192.168.178.21",
+      "Port": 49501,
+      "Data": "Temparatur: 27.771107°C"
+    }
+  },
+  {
+    "Luftfeuchtigkeit": {
+      "Ip": "/192.168.178.21",
+      "Port": 49502,
+      "Data": "Luftfeuchtigkeit: 20.861885%"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49503,
+      "Data": "LuefterDrehzahl: 196U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49504,
+      "Data": "Fenster: Geoeffnet"
+    }
+  },
+  {
+    "Temparatur": {
+      "Ip": "/192.168.178.21",
+      "Port": 49505,
+      "Data": "Temparatur: 14.217277°C"
+    }
+  },
+  {
+    "Luftfeuchtigkeit": {
+      "Ip": "/192.168.178.21",
+      "Port": 49506,
+      "Data": "Luftfeuchtigkeit: 0.23959827%"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49507,
+      "Data": "LuefterDrehzahl: 170U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49508,
+      "Data": "Fenster: Geschlossen"
+    }
+  },
+  {
+    "Temparatur": {
+      "Ip": "/192.168.178.21",
+      "Port": 49509,
+      "Data": "Temparatur: 25.656567°C"
+    }
+  },
+  {
+    "Luftfeuchtigkeit": {
+      "Ip": "/192.168.178.21",
+      "Port": 49510,
+      "Data": "Luftfeuchtigkeit: 9.794992%"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49511,
+      "Data": "LuefterDrehzahl: 198U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49512,
+      "Data": "Fenster: Geschlossen"
+    }
+  },
+  {
+    "Temparatur": {
+      "Ip": "/192.168.178.21",
+      "Port": 49513,
+      "Data": "Temparatur: 3.2522073°C"
+    }
+  },
+  {
+    "Luftfeuchtigkeit": {
+      "Ip": "/192.168.178.21",
+      "Port": 49514,
+      "Data": "Luftfeuchtigkeit: 14.769065%"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49515,
+      "Data": "LuefterDrehzahl: 170U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49516,
+      "Data": "Fenster: Geoeffnet"
+    }
+  },
+  {
+    "Temparatur": {
+      "Ip": "/192.168.178.21",
+      "Port": 49517,
+      "Data": "Temparatur: 24.709528°C"
+    }
+  },
+  {
+    "Luftfeuchtigkeit": {
+      "Ip": "/192.168.178.21",
+      "Port": 49518,
+      "Data": "Luftfeuchtigkeit: 3.84405%"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49519,
+      "Data": "LuefterDrehzahl: 143U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49520,
+      "Data": "Fenster: Geschlossen"
+    }
+  },
+  {
+    "Temparatur": {
+      "Ip": "/192.168.178.21",
+      "Port": 49521,
+      "Data": "Temparatur: 2.897513°C"
+    }
+  },
+  {
+    "Luftfeuchtigkeit": {
+      "Ip": "/192.168.178.21",
+      "Port": 49522,
+      "Data": "Luftfeuchtigkeit: 9.741449%"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49523,
+      "Data": "LuefterDrehzahl: 185U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49524,
+      "Data": "Fenster: Geschlossen"
+    }
+  },
+  {
+    "Temparatur": {
+      "Ip": "/192.168.178.21",
+      "Port": 49525,
+      "Data": "Temparatur: 22.519485°C"
+    }
+  },
+  {
+    "Luftfeuchtigkeit": {
+      "Ip": "/192.168.178.21",
+      "Port": 49526,
+      "Data": "Luftfeuchtigkeit: 23.778929%"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49527,
+      "Data": "LuefterDrehzahl: 179U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49528,
+      "Data": "Fenster: Geschlossen"
+    }
+  },
+  {
+    "Temparatur": {
+      "Ip": "/192.168.178.21",
+      "Port": 49529,
+      "Data": "Temparatur: 17.866537°C"
+    }
+  },
+  {
+    "Luftfeuchtigkeit": {
+      "Ip": "/192.168.178.21",
+      "Port": 49530,
+      "Data": "Luftfeuchtigkeit: 6.26869%"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49531,
+      "Data": "LuefterDrehzahl: 173U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49532,
+      "Data": "Fenster: Geschlossen"
+    }
+  },
+  {
+    "Temparatur": {
+      "Ip": "/192.168.178.21",
+      "Port": 49533,
+      "Data": "Temparatur: 12.612185°C"
+    }
+  },
+  {
+    "Luftfeuchtigkeit": {
+      "Ip": "/192.168.178.21",
+      "Port": 49534,
+      "Data": "Luftfeuchtigkeit: 17.301632%"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49535,
+      "Data": "LuefterDrehzahl: 160U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49536,
+      "Data": "Fenster: Geschlossen"
+    }
+  },
+  {
+    "Temparatur": {
+      "Ip": "/192.168.178.21",
+      "Port": 49537,
+      "Data": "Temparatur: 23.844093°C"
+    }
+  },
+  {
+    "Luftfeuchtigkeit": {
+      "Ip": "/192.168.178.21",
+      "Port": 49538,
+      "Data": "Luftfeuchtigkeit: 26.2792%"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49539,
+      "Data": "LuefterDrehzahl: 106U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49540,
+      "Data": "Fenster: Geschlossen"
+    }
+  },
+  {
+    "Temparatur": {
+      "Ip": "/192.168.178.21",
+      "Port": 49541,
+      "Data": "Temparatur: 15.343744°C"
+    }
+  },
+  {
+    "Luftfeuchtigkeit": {
+      "Ip": "/192.168.178.21",
+      "Port": 49542,
+      "Data": "Luftfeuchtigkeit: 23.92472%"
+    }
+  },
+  {
+    "LuefterDrehzahl": {
+      "Ip": "/192.168.178.21",
+      "Port": 49543,
+      "Data": "LuefterDrehzahl: 151U/Min"
+    }
+  },
+  {
+    "Fenster": {
+      "Ip": "/192.168.178.21",
+      "Port": 49544,
+      "Data": "Fenster: Geoeffnet"
+    }
+  },
+  {
+    "Temparatur": {
+      "Ip": "/192.168.178.21",
+      "Port": 49545,
+      "Data": "Temparatur: 2.290705°C"
+    }
+  },
+  {
+    "Luftfeuchtigkeit": {
+      "Ip": "/192.168.178.21",
+      "Port": 49546,
+      "Data": "Luftfeuchtigkeit: 9.5109215%"
+    }
+  }
+]

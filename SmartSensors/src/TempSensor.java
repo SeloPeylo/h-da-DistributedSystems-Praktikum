@@ -13,7 +13,6 @@ public class TempSensor extends Sensor {
     {
         float measurement = (-1500f + (Math.abs(super.random.nextInt()) % 6000)) / 100 ; //-15 to 45 degrees
         String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-        String message = timeStamp + " TempSensor Degrees: " + measurement;
-        return message;
+        return (timeStamp + " TempSensor Degrees: " + measurement);
     }
 }

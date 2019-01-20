@@ -3,9 +3,12 @@ import java.net.*;
 import java.util.Random;
 import java.util.Vector;
 
+/*
+ * Diese Sensorklasse wird von den einzelnen Sensortypen geerbt und erweitert.
+ * Sie stellt die Funktion zur Verfügung UDP packete über den Lokalhost zu versenden.
+ */
 abstract public class Sensor implements Runnable {
 
-    // For when the class is running
     protected boolean running;
     protected int sleepTime = 1000;
     protected String sensorName = "Sensor";
@@ -21,7 +24,7 @@ abstract public class Sensor implements Runnable {
     protected static DatagramSocket socket = null;
 
     //For generation of random Data
-    protected Random random = new Random();
+    protected final Random random = new Random();
 
 
     //Constructors
@@ -108,12 +111,7 @@ abstract public class Sensor implements Runnable {
         //Insert UDP Send Code here
     }
 
-    public static void main(String[] args) throws UnknownHostException, SocketException {
-
-        BathSensor bath;
-        HumiditySensor humidity;
-        TempSensor temp;
-        WindowSensor window;
+    public static void main(String[] args) throws UnknownHostException {
 
         Vector<Sensor> sensors = new Vector<>();
         sensors.add(new BathSensor());
