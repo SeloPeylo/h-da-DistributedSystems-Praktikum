@@ -20,7 +20,7 @@ class HerstellerMqttCallback implements org.eclipse.paho.client.mqttv3.MqttCallb
         } catch (JSONException jex) {
             jex.getCause();
         }
-        System.out.println("MQTT received!:\n\t" + sensorData.toString());
+        System.out.println("== MQTT == received:" + sensorData.toString() + " == MQTT ==");
 
         //new Thread(new HerstellerMysqlClient(sensorData)).start();
     }

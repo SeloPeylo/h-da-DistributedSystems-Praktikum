@@ -18,7 +18,7 @@ public class HerstellerMysqlClient implements Runnable {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/herstellerdb", "root", "EFRKLJ39dg3dD3g");
+                    "jdbc:mysql://localhost:3306/herstellerDB", "sh-hersteller1", "hersteller1");
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("select * from emp");
             while (rs.next())

@@ -132,7 +132,7 @@ public class HttpServer implements Runnable {
                         + tableRowStart()
                         + midTableCell(k.get("Address").toString())
                         + shortTableCell(k.get("Port").toString())
-                        + midTableCell( k.get("Sensorname").toString())
+                        + midTableCell(k.get("Sensorname").toString())
                         + shortTableCell(k.get("Messagenr").toString())
                         + midTableCell(k.get("Time").toString())
                         + midTableCell(k.get("Message").toString())
@@ -159,19 +159,19 @@ public class HttpServer implements Runnable {
         Vector<JSONObject> weatherList = sensorData.getWeatherList();
 
         tableContent += ""
-                + "<tr>"
-                + "<td style=\"width: 100px;\">&nbsp;" + "Ort" + "</td>"
-                + "<td style=\"width: 200px;\">&nbsp;" + "Koordinaten" + "</td>"
-                + "<td style=\"width: 300px;\">&nbsp;" + "Message" + "</td>"
-                + "</tr>";
+                + tableRowStart()
+                + midTableCell("Ort")
+                + midTableCell("Koordinaten")
+                + midTableCell("Message")
+                + tableRowEnd();
         for (JSONObject k : weatherList) {
             try {
                 tableContent += ""
-                        + "<tr>"
-                        + "<td style=\"width: 100px;\">&nbsp;" + k.get("name") + "</td>"
-                        + "<td style=\"width: 200px;\">&nbsp;" + k.get("coord") + "</td>"
-                        + "<td style=\"width: 300px;\">&nbsp;" + k.get("main") + "</td>"
-                        + "</tr>";
+                        + tableRowStart()
+                        + midTableCell(k.get("name").toString())
+                        + midTableCell(k.get("coord").toString())
+                        + midTableCell(k.get("main").toString())
+                        + tableRowEnd();
             } catch (JSONException jex) {
                 jex.printStackTrace();
             }

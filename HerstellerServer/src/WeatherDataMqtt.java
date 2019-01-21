@@ -9,7 +9,7 @@ import java.util.Vector;
 public class WeatherDataMqtt implements Runnable {
 
     private static IMqttClient client = null;
-    private static String topic = "sh_weather_data1";
+    private static String topic;
     private Vector<MqttMessage> messageList = new Vector<>();
 
     public WeatherDataMqtt(IMqttClient client) {
@@ -45,7 +45,7 @@ public class WeatherDataMqtt implements Runnable {
                 MqttMessage message = new MqttMessage();
                 message.setPayload(output.getBytes());
                 messageList.add(message);
-                System.out.println("\tMessage '"+ output);
+                System.out.println("== REST Weatherdata == '"+ output);
             }
 
         } catch (Exception ex) {ex.printStackTrace();}
@@ -63,12 +63,12 @@ public class WeatherDataMqtt implements Runnable {
                 {
                     continue;
                 }
-                Thread.sleep(1000);
+                Thread.sleep(5000);
                 MqttMessage message = messageList.remove(0);
                 message.setRetained(true);
                 message.setQos(0);
                 client.publish(topic, message);
-                System.out.println("MQTT published!");
+                System.out.println("== MQTT == published:" + message.toString() + " == MQTT ==");
                 //client.disconnect();
             }
         } catch (MqttException mex) {

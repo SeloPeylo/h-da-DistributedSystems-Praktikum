@@ -123,6 +123,15 @@ abstract public class Sensor implements Runnable {
 
     public static void main(String[] args) throws UnknownHostException {
 
+        Runtime.getRuntime().addShutdownHook(new Thread()
+        {
+            @Override
+            public void run()
+            {
+                System.out.println("Shutdown hook ran!");
+            }
+        });
+
         Vector<Sensor> sensors = new Vector<>();
         sensors.add(new BathSensor());
         sensors.add(new HumiditySensor());
@@ -176,5 +185,10 @@ abstract public class Sensor implements Runnable {
             sensors.add(new WindowSensor());
             sensors.add(new TempSensor());
         }
+    }
+
+    public static int getPackagesSend(){
+        int result = packagesSend;
+        return result;
     }
 }
