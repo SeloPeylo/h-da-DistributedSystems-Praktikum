@@ -9,16 +9,21 @@ import java.util.Vector;
 public class WeatherDataMqtt implements Runnable {
 
     private static IMqttClient client = null;
+    private static String topic = "sh_weather_data1";
     private Vector<MqttMessage> messageList = new Vector<>();
 
     public WeatherDataMqtt(IMqttClient client) {
         this.client = client;
     }
 
+    public static void setTopic(String s){
+        topic = s;
+    }
+
     private void getWeather() {
         try {
 
-            URL url = new URL("http://api.openweathermap.org/data/2.5/weather?q=Berlin&APPID=57c3088ea624194fea7ae6e3ea69dc8f");
+            URL url = new URL("http://api.openweathermap.org/data/2.5/weather?q=Darmstadt&APPID=57c3088ea624194fea7ae6e3ea69dc8f");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.setRequestProperty("Accept", "application/json");
@@ -62,7 +67,7 @@ public class WeatherDataMqtt implements Runnable {
                 MqttMessage message = messageList.remove(0);
                 message.setRetained(true);
                 message.setQos(0);
-                client.publish("sh_weather_data", message);
+                client.publish(topic, message);
                 System.out.println("MQTT published!");
                 //client.disconnect();
             }

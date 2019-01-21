@@ -10,7 +10,7 @@ import java.util.Vector;
 abstract public class Sensor implements Runnable {
 
     protected boolean running;
-    protected int sleepTime = 1000;
+    protected int sleepTime = 1000;             //Messintervall
     protected String sensorName = "Sensor";
 
     //Destination Address
@@ -99,13 +99,14 @@ abstract public class Sensor implements Runnable {
 
         //DatagramSocket socket = new DatagramSocket();
         socket.send(packet);
-        packagesSend++;
+        int messagenr = packagesSend++;
+
         //socket.close();
         //sender.addPacket(packet);
 
-        System.out.printf("%s:\t sending message #%d to %s at Port %d\n",
+        System.out.printf("== UDP == %s: sending message #%d to %s at Port %d == UDP ==\n",
                 this.sensorName,
-                packagesSend,
+                messagenr,
                 this.address.getHostAddress(),
                 this.port);
         //Insert UDP Send Code here

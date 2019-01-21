@@ -27,9 +27,10 @@ public class SmartHome implements Runnable {
     public void run() {
         if (packet != null) {
             String receivedData = new String(packet.getData());
-            String message = "Message from " + packet.getAddress() +
+            String message = "== UDP == Message from " + packet.getAddress() +
                     " Port " + packet.getPort() +
-                    " Message: " + receivedData;
+                    " Message: " + receivedData +
+                    " == UDP ==";
             System.out.println(message);
             String split[] = receivedData.split(" ");
             JSONObject data = new JSONObject();
@@ -57,8 +58,7 @@ public class SmartHome implements Runnable {
         System.out.println("Starting Smart-Home-Central");
         String[] serverURL = {"tcp://localhost:1884", "tcp://localhost:1885", "tcp://localhost:1886"};
 
-        MqttPublisher publisher = new MqttPublisher();
-        SensorData sensorData = new SensorData(publisher);
+        SensorData sensorData = new SensorData();
         HttpServer webServer = new HttpServer(sensorData);
         new Thread(webServer).start();
 

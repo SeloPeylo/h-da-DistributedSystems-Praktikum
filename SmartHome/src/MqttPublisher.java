@@ -1,29 +1,21 @@
 import org.eclipse.paho.client.mqttv3.*;
 
-import java.util.concurrent.Callable;
-
+/*
+ * This class publishes a Message requiring an active Connection
+ */
 public class MqttPublisher implements Runnable {
 
-    private IMqttClient client = null;
-    private String clientID = "publisher1";
+    private IMqttClient client;
     private MqttMessage message = null;
+    private String topic = null;
 
-
-    public MqttPublisher() {
-        try {
-            System.out.println("== Starting MQTT Client ==");
-            client = new MqttClient("tcp://iot.eclipse.org:1883", clientID);
-            //client = new MqttClient("tcp://localhost:1884", clientID);
-        } catch (MqttException mex) {
-            mex.getCause();
-        }
-
-
+    public MqttPublisher(IMqttClient client){
+        this.client = client;
     }
 
-    public void putMessage(byte[] payload) {
-
-        message = new MqttMessage(payload);
+    public void setMessage(MqttMessage message, String topic){
+        this.message = message;
+        this.topic = topic;
     }
 
     @Override
@@ -32,11 +24,10 @@ public class MqttPublisher implements Runnable {
             if (!client.isConnected()) {
                 client.connect();
             }
-            message.setRetained(true);
-            message.setQos(0);
-            client.publish("sh_sensor_data", message);
-            System.out.println("MQTT Message published!");
-            //client.disconnect();
+            //message.setRetained(true);
+            //message.setQos(0);
+            client.publish(topic, message);
+            System.out.println("== MQTT == published: " + message.toString() + " == MQTT ==");
         } catch (MqttException mex) {
             mex.getCause();
         }

@@ -69,11 +69,10 @@ public class HttpServer implements Runnable {
                 break;
             case "GET /Window HTTP/1.1":
                 htmlPage(connectionSocket, out, sensorPage("WindowSensor"));
-                break; /*
+                break;
             case "GET /Weather HTTP/1.1":
                 htmlPage(connectionSocket, out, weatherPage());
                 break;
-                */
             default:
                 htmlPage(connectionSocket, out, pageNotFound());
                 break;
@@ -108,6 +107,7 @@ public class HttpServer implements Runnable {
                 + "<a href=\"Humidity\">Humidity-Sensor</a><br />"
                 + "<a href=\"Temp\">Temperature-Sensor</a><br />"
                 + "<a href=\"Window\">Window-Sensor</a><br />"
+                + "<a href=\"Weather\">Weather-Data</a><br />"
                 + "</p>";
         return htmlCode;
     }
@@ -115,8 +115,6 @@ public class HttpServer implements Runnable {
     public String sensorPage(String sensorType) {
         String tableContent = "";
         Vector<JSONObject> dataList = sensorData.getFilteredList(sensorType);
-        int index;
-        String ksub;
 
         tableContent += ""
                 + "<tr>"
@@ -141,6 +139,41 @@ public class HttpServer implements Runnable {
 
         String htmlCode = ""
                 + "<h3>" + sensorType + "-Sensors</h3>"
+                + "<table style=\"height: 124px; width: 500px;\" border=\"1\">"
+                + "<tbody>"
+                + tableContent
+                + "</tbody>"
+                + "</table>";
+
+        return htmlCode;
+    }
+
+    public String weatherPage(){
+        String tableContent = "";
+
+        Vector<JSONObject> weatherList = sensorData.getWeatherList();
+
+        tableContent += ""
+                + "<tr>"
+                + "<td style=\"width: 100px;\">&nbsp;" + "Ort" + "</td>"
+                + "<td style=\"width: 200px;\">&nbsp;" + "Koordinaten" + "</td>"
+                + "<td style=\"width: 300px;\">&nbsp;" + "Message" + "</td>"
+                + "</tr>";
+        for (JSONObject k : weatherList) {
+            try {
+                tableContent += ""
+                        + "<tr>"
+                        + "<td style=\"width: 100px;\">&nbsp;" + k.get("name") + "</td>"
+                        + "<td style=\"width: 200px;\">&nbsp;" + k.get("coord") + "</td>"
+                        + "<td style=\"width: 300px;\">&nbsp;" + k.get("main") + "</td>"
+                        + "</tr>";
+            } catch (JSONException jex) {
+                jex.printStackTrace();
+            }
+        }
+
+        String htmlCode = ""
+                + "<h3>Weather-Data</h3>"
                 + "<table style=\"height: 124px; width: 500px;\" border=\"1\">"
                 + "<tbody>"
                 + tableContent

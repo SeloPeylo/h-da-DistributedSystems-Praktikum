@@ -10,6 +10,12 @@ class HerstellerMqttServer {
             client.setCallback(new HerstellerMqttCallback());
             client.connect();
             client.subscribe("sh_sensor_data");
+
+            if (args.length <= 0) {
+                WeatherDataMqtt.setTopic("sh_weather_data1");
+            } else {
+                WeatherDataMqtt.setTopic(args[0]);
+            }
             new Thread(new WeatherDataMqtt(client)).start();
 
         } catch (MqttException mex) {
