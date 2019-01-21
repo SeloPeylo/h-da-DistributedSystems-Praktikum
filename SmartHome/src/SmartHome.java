@@ -33,19 +33,19 @@ public class SmartHome implements Runnable {
                     " == UDP ==";
             System.out.println(message);
             String split[] = receivedData.split(" ");
+            split[4] = split[4].substring(0,split[4].indexOf(0)); //This removes all 0 chars
             JSONObject data = new JSONObject();
             try {
                 data.put("Address", packet.getAddress());
                 data.put("Port", packet.getPort());
-                data.put("Time", split[0]);
-                data.put("Sensortype", split[1]);
-                data.put("Message", (split[2] + " " + split[3]));
-                data.put("Value", split[3]);
+                data.put("Messagenr", split[0]);
+                data.put("Time", split[1]);
+                data.put("Sensorname", split[2]);
+                data.put("Message", (split[3] + split[4]));
+                data.put("Value", split[4]);
             } catch (JSONException jex) {
                 jex.printStackTrace();
             }
-
-
             sensorData.addData(data);
         }
     }

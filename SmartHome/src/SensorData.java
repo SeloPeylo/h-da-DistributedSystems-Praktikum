@@ -13,7 +13,6 @@ public class SensorData {
     private static Vector<JSONObject> dataList = new Vector<>();
     private static Vector<JSONObject> weatherList = new Vector<>();
     private static IMqttClient client = null;
-    private MqttPublisher publisher;
 
     private static final String sensor_topic = "sh_sensor_data";
     private static final String weather_topic1 = "sh_weather_data1";
@@ -28,7 +27,6 @@ public class SensorData {
             client.subscribe(weather_topic1);
             client.subscribe(weather_topic2);
             client.subscribe(weather_topic3);
-            this.publisher = new MqttPublisher(client);
         } catch (MqttException mex) {
             mex.getCause();
         }
@@ -37,6 +35,7 @@ public class SensorData {
     public void addData(JSONObject data) {
         dataList.add(data);
         byte[] payload = String.valueOf(data).getBytes();
+        MqttPublisher publisher = new MqttPublisher(client);
         publisher.setMessage(new MqttMessage(payload), sensor_topic);
         new Thread(publisher).start();
     }
@@ -54,7 +53,7 @@ public class SensorData {
 
         for (int i = 0; i < dataList.size(); i++) {
             try {
-                if (dataList.get(i).get("Sensortype").equals(key)) {
+                if (dataList.get(i).get("Sensorname").toString().contains(key)) {
                     result.add(dataList.get(i));
                 }
             } catch (JSONException jex) {

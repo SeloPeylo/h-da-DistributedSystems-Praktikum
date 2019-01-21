@@ -1,5 +1,7 @@
 import java.io.IOException;
 import java.net.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Random;
 import java.util.Vector;
 
@@ -12,6 +14,8 @@ abstract public class Sensor implements Runnable {
     protected boolean running;
     protected int sleepTime = 1000;             //Messintervall
     protected String sensorName = "Sensor";
+    protected static int created = 0;
+    protected int sensorNumber = created++;
 
     //Destination Address
     protected InetAddress address;
@@ -21,6 +25,7 @@ abstract public class Sensor implements Runnable {
     protected String message;
     protected byte[] buf;
     protected static int packagesSend = 0;
+    protected int messagenr;
     protected static DatagramSocket socket = null;
 
     //For generation of random Data
@@ -75,8 +80,15 @@ abstract public class Sensor implements Runnable {
                 this.running = false;
                 continue;
             }
-
-            this.message = this.measure();
+            this.messagenr = packagesSend++;
+            this.message = ""
+                    + this.messagenr         //MessageNumber
+                    + " "
+                    + new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()) //Timestamp
+                    + " "
+                    + this.sensorName
+                    + " "
+                    + this.measure();    //Results of Sensor-Measurement
 
             try {
                 sendMessage(this.message);
@@ -99,16 +111,13 @@ abstract public class Sensor implements Runnable {
 
         //DatagramSocket socket = new DatagramSocket();
         socket.send(packet);
-        int messagenr = packagesSend++;
 
         //socket.close();
         //sender.addPacket(packet);
 
-        System.out.printf("== UDP == %s: sending message #%d to %s at Port %d == UDP ==\n",
+        System.out.printf("== UDP == %s sending: %s == UDP ==\n",
                 this.sensorName,
-                messagenr,
-                this.address.getHostAddress(),
-                this.port);
+                this.message);
         //Insert UDP Send Code here
     }
 

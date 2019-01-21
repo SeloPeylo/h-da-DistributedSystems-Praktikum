@@ -1,18 +1,16 @@
 import java.net.UnknownHostException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class TempSensor extends Sensor {
-    private static int created = 1;
 
-    public TempSensor() throws UnknownHostException
-    { super(); this.sensorName = "Temp-Sensor " + created; created++; }
+    public TempSensor() throws UnknownHostException {
+        this.sensorName = "TempSensor-" + this.sensorNumber;
+    }
 
     @Override
     protected String measure()
     {
         float measurement = (-1500f + (Math.abs(super.random.nextInt()) % 6000)) / 100 ; //-15 to 45 degrees
-        String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-        return (timeStamp + " TempSensor Degrees: " + measurement);
+        String result = "Degrees: " + measurement;
+        return result;
     }
 }
