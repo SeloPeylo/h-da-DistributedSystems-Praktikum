@@ -1,18 +1,12 @@
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
-import org.eclipse.paho.client.mqttv3.MqttCallback;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-class SimpleMqttCallBack implements MqttCallback {
+class MqttCallback implements org.eclipse.paho.client.mqttv3.MqttCallback {
 
     private String message = null;
     private JSONObject sensorData = null;
-
-    public SimpleMqttCallBack()
-    {
-
-    }
 
     public void connectionLost(Throwable throwable) {
         System.out.println("Connection to MQTT broker lost!");
@@ -26,9 +20,9 @@ class SimpleMqttCallBack implements MqttCallback {
         } catch (JSONException jex) {
             jex.getCause();
         }
-        System.out.println("Message received:\n\t" + sensorData.toString());
+        System.out.println("MQTT received!:\n\t" + sensorData.toString());
 
-        new Thread(new Mysqlconnection(sensorData)).start();
+        //new Thread(new HerstellerMysqlClient(sensorData)).start();
     }
 
     public void deliveryComplete(IMqttDeliveryToken iMqttDeliveryToken) {

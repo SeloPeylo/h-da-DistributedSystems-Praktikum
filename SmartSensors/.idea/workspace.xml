@@ -3,21 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="c12b9964-1738-4e5a-9286-25f4a3930643" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../HerstellerServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HerstellerServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HerstellerServer/out/production/HerstellerServer/HerstellerServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HerstellerServer/out/production/HerstellerServer/HerstellerServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HerstellerServer/out/production/HerstellerServer/SimpleMqttCallBack.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HerstellerServer/out/production/HerstellerServer/SimpleMqttCallBack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HerstellerServer/src/HerstellerServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HerstellerServer/src/HerstellerServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HerstellerServer/src/SimpleMqttCallBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HerstellerServer/src/SimpleMqttCallBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HerstellerServer/out/production/HerstellerServer/HerstellerServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HerstellerServer/out/production/HerstellerServer/MqttPublisher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HerstellerServer/out/production/HerstellerServer/Mysqlconnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HerstellerServer/out/production/HerstellerServer/SimpleMqttCallBack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HerstellerServer/src/HerstellerServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HerstellerServer/src/HerstellerMqttServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HerstellerServer/src/Mysqlconnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HerstellerServer/src/HerstellerMysqlClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HerstellerServer/src/SimpleMqttCallBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HerstellerServer/src/HerstellerMqttCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HerstellerServer/src/WeatherDataMqtt.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HerstellerServer/src/WeatherDataMqtt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SmartHome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartHome/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartSensors/BathSensor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartSensors/BathSensor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartSensors/HumiditySensor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartSensors/HumiditySensor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartSensors/TempSensor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartSensors/TempSensor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartSensors/WindowSensor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartSensors/WindowSensor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BathSensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BathSensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HumiditySensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HumiditySensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TempSensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TempSensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WindowSensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WindowSensor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../help/mqtt-sample-java" beforeDir="false" afterPath="$PROJECT_DIR$/../help/mqtt-sample-java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,9 +40,11 @@
     <session id="1708978353">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -76,8 +74,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Sensor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+            <state relative-caret-position="391">
+              <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -149,7 +147,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="817" />
     <option name="height" value="1047" />
@@ -178,8 +176,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -243,18 +241,18 @@
       <workItem from="1547766211689" duration="751000" />
       <workItem from="1547808920033" duration="7601000" />
       <workItem from="1547987430203" duration="4355000" />
-      <workItem from="1548010954543" duration="1203000" />
+      <workItem from="1548010954543" duration="1563000" />
+      <workItem from="1548060081157" duration="625000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20112000" />
+    <option name="totallyTimeSpent" value="21097000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10927505" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.110341154" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -310,8 +308,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Sensor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+        <state relative-caret-position="391">
+          <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

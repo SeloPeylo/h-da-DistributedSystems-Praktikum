@@ -5,11 +5,11 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class Mysqlconnection implements Runnable {
+public class HerstellerMysqlClient implements Runnable {
 
     private JSONObject data = null;
 
-    public Mysqlconnection(JSONObject data) {
+    public HerstellerMysqlClient(JSONObject data) {
         this.data = data;
     }
 
