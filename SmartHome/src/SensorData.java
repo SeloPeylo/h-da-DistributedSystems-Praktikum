@@ -5,6 +5,7 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Comparator;
 import java.util.Vector;
 
 
@@ -33,6 +34,7 @@ public class SensorData {
     }
 
     public void addData(JSONObject data) {
+        Test.setReceivedCount(dataList.size());
         dataList.add(data);
         byte[] payload = String.valueOf(data).getBytes();
         MqttPublisher publisher = new MqttPublisher(client);
@@ -74,5 +76,32 @@ public class SensorData {
             result.add(weatherList.get(i));
         }
         return result;
+    }
+
+    public static void reduceDoubleSort() {
+        try {
+
+            for (int i = 0; i < dataList.size() - 1; i++) {
+                int nr1 = Integer.parseInt(dataList.get(i).getString("Messagenr"));
+                int nr2 = Integer.parseInt(dataList.get(i + 1).getString("Messagenr"));
+
+                if (nr1 > nr2) {
+                    dataList.insertElementAt(dataList.remove(i), i+1);
+                    for (int j = i; j > 0; j--) {
+                        nr1 = Integer.parseInt(dataList.get(j).getString("Messagenr"));
+                        nr2 = Integer.parseInt(dataList.get(j - 1).getString("Messagenr"));
+                        if(nr2 > nr1){
+                            dataList.insertElementAt(dataList.remove(j), j-1);
+                        }
+                    }
+                }
+                if (nr1 == nr2) {
+                    dataList.remove(i);
+                }
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 }

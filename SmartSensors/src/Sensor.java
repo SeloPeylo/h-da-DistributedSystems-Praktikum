@@ -122,13 +122,11 @@ abstract public class Sensor implements Runnable {
     }
 
     public static void main(String[] args) throws UnknownHostException {
-
-        Runtime.getRuntime().addShutdownHook(new Thread()
-        {
+        Runtime.getRuntime().addShutdownHook(new Thread() {
             @Override
             public void run()
             {
-                System.out.println("Shutdown hook ran!");
+                System.out.println(Test.getTestResults());
             }
         });
 
@@ -145,6 +143,7 @@ abstract public class Sensor implements Runnable {
                 for (Sensor k : sensors) {
                     k.setSleepTime(5);
                 }
+                new Thread(new Test()).start();
             }
             if (args[i].contains(".")) {
                 InetAddress address = InetAddress.getByName(args[i]);

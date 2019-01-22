@@ -68,6 +68,9 @@ public class SmartHome implements Runnable {
                 str.replace("port=", "");
                 listeningPort = Integer.parseInt(str);
             }
+            if (args[i].contains("-nftest")){
+                new Thread(new Test()).start();
+            }
         }
         DatagramSocket socket = null;
         try {
