@@ -5,44 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="240f2311-9a82-46fe-9f3b-2ead5324f2ed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.~lock.Protokoll.odt#" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hersteller1-tcpioteclipseorg1883/.lck" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hersteller2-tcpioteclipseorg1883/.lck" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hersteller3-tcpioteclipseorg1883/.lck" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/HerstellerMqttCallback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/HerstellerMqttServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/HerstellerMysqlClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/WeatherDataMqtt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/java-json.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HerstellerServer/java-mqtt.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Protokoll.odt" beforeDir="false" afterPath="$PROJECT_DIR$/../Protokoll.odt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SmartHome/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartHome/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SmartHome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartHome/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartHome/out/production/SmartHome/HttpServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartHome/out/production/SmartHome/MqttCallback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartHome/out/production/SmartHome/MqttPublisher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartHome/out/production/SmartHome/SensorData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartHome/out/production/SmartHome/SmartHome.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartHome/out/production/SmartHome/java-json.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartHome/out/production/SmartHome/java-mqtt.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartHome/publisher1-tcpioteclipseorg1883/.lck" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartHome/publisher1-tcplocalhost1884/.lck" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartHome/smarthome1-tcpioteclipseorg1883/.lck" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartHome/src/SensorData.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartHome/src/SensorData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartHome/src/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartHome/src/HttpServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartHome/src/MqttCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartHome/src/MqttCallback.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SmartHome/src/SmartHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartHome/src/SmartHome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartHome/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartHome/src/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SmartSensors/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartSensors/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SmartSensors/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartSensors/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartSensors/SmartSensors.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartSensors/SmartSensors.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartSensors/out/production/SmartSensors/BathSensor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartSensors/out/production/SmartSensors/HumiditySensor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartSensors/out/production/SmartSensors/Sensor$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartSensors/out/production/SmartSensors/Sensor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartSensors/out/production/SmartSensors/TempSensor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartSensors/out/production/SmartSensors/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartSensors/out/production/SmartSensors/WindowSensor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartSensors/src/BathSensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartSensors/src/BathSensor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartSensors/src/HumiditySensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartSensors/src/HumiditySensor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SmartSensors/src/Sensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartSensors/src/Sensor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartSensors/src/TempSensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartSensors/src/TempSensor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SmartSensors/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartSensors/src/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartSensors/src/TestMqttCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartSensors/src/TestMqttCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartSensors/src/WindowSensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartSensors/src/WindowSensor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../help/mqtt-sample-java" beforeDir="false" afterPath="$PROJECT_DIR$/../help/mqtt-sample-java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -56,6 +36,7 @@
     <session id="999031755">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -93,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HerstellerMqttCallback.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+            <state relative-caret-position="170">
+              <caret line="11" column="54" lean-forward="true" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/WeatherDataMqtt.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+            <state relative-caret-position="391">
+              <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -292,18 +273,18 @@
       <workItem from="1548069830978" duration="4173000" />
       <workItem from="1548083270866" duration="620000" />
       <workItem from="1548098156331" duration="4878000" />
-      <workItem from="1548110972670" duration="2231000" />
+      <workItem from="1548110972670" duration="2297000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42592000" />
+    <option name="totallyTimeSpent" value="42658000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15724947" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15724947" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -315,7 +296,7 @@
       <window_info anchor="bottom" id="Messages" order="2" weight="0.329718" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.32884398" />
+      <window_info anchor="bottom" id="Run" order="5" weight="0.3286334" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.30260304" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
@@ -360,16 +341,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/WeatherDataMqtt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MqttCallback.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -389,8 +360,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HerstellerMqttCallback.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        <state relative-caret-position="170">
+          <caret line="11" column="54" lean-forward="true" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WeatherDataMqtt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

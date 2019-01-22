@@ -16,16 +16,21 @@ class MqttCallback implements org.eclipse.paho.client.mqttv3.MqttCallback {
     }
 
     public void messageArrived(String s, MqttMessage mqttMessage) {
-        message = new String(mqttMessage.getPayload());
-        try {
+        if (s.contains("sh_weather_data")) {
 
-            sensorData = new JSONObject(message);
-            sensorData.put("topic", s);
-        } catch (JSONException jex) {
-            jex.getCause();
+            message = new String(mqttMessage.getPayload());
+            try {
+
+                sensorData = new JSONObject(message);
+                sensorData.put("topic", s);
+            } catch (JSONException jex) {
+                jex.getCause();
+            }
+            System.out.println("== MQTT == received: " + sensorData.toString() + " == MQTT ==");
+            SensorData.addWeather(sensorData);
+        } else if(s.contains("sh_test1")){
+            Test.publishMessage(mqttMessage, "sh_test1");
         }
-        System.out.println("== MQTT == received: " + sensorData.toString() + " == MQTT ==");
-        SensorData.addWeather(sensorData);
     }
 
     public void deliveryComplete(IMqttDeliveryToken iMqttDeliveryToken) {

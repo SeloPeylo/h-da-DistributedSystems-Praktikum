@@ -1,8 +1,10 @@
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 
-import java.util.Vector;
-
+/**
+ *
+ * Callback um eine Nachricht zu bearbeiten
+ */
 class TestMqttCallback implements org.eclipse.paho.client.mqttv3.MqttCallback {
 
     private static String message = null;
@@ -11,9 +13,17 @@ class TestMqttCallback implements org.eclipse.paho.client.mqttv3.MqttCallback {
         System.out.println("Connection to MQTT broker lost!");
     }
 
+    /**
+     * Empfängt von der Smart-Home-Zentrale wieviele Nachrichten angekommen sind
+     * @param s topic
+     * @param mqttMessage
+     */
     public void messageArrived(String s, MqttMessage mqttMessage) {
-        message = new String(mqttMessage.getPayload());
-        Test.setArrivedCount(Integer.parseInt(message));
+        if(s.contains("sh_test1")){
+            Test.setArrivedMessage(mqttMessage.toString());
+        } else if(s.contains("sh_test")){
+            Test.setArrivedCount(Integer.parseInt(mqttMessage.toString()));
+        }
     }
 
     public void deliveryComplete(IMqttDeliveryToken iMqttDeliveryToken) {

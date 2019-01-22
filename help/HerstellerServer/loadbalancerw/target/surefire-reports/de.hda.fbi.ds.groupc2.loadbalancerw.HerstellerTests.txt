@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: de.hda.fbi.ds.groupc2.loadbalancerw.HerstellerTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.182 s - in de.hda.fbi.ds.groupc2.loadbalancerw.HerstellerTests

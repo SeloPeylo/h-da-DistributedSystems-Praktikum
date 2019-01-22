@@ -96,7 +96,7 @@ public class HttpServer implements Runnable {
         connectionSocket.close();
     }
 
-    public String indexPage() {
+    public static String indexPage() {
 
         String htmlCode = ""
                 + "<h3>Willkommen zur Smart Home Zentrale</h3>"
@@ -115,7 +115,6 @@ public class HttpServer implements Runnable {
 
     public String sensorPage(String sensorType) {
         String tableContent = "";
-        Vector<JSONObject> dataList = sensorData.getFilteredList(sensorType);
 
         tableContent += ""
                 + tableRowStart()
@@ -126,19 +125,23 @@ public class HttpServer implements Runnable {
                 + midTableCell("Time")
                 + midTableCell("Message")
                 + tableRowEnd();
-        for (JSONObject k : dataList) {
-            try {
-                tableContent += ""
-                        + tableRowStart()
-                        + midTableCell(k.get("Address").toString())
-                        + shortTableCell(k.get("Port").toString())
-                        + midTableCell(k.get("Sensorname").toString())
-                        + shortTableCell(k.get("Messagenr").toString())
-                        + midTableCell(k.get("Time").toString())
-                        + midTableCell(k.get("Message").toString())
-                        + tableRowEnd();
-            } catch (JSONException jex) {
-                jex.printStackTrace();
+
+        Vector<JSONObject> dataList = sensorData.getFilteredList(sensorType);
+        if (dataList != null && dataList.size() > 0) {
+            for (JSONObject k : dataList) {
+                try {
+                    tableContent += ""
+                            + tableRowStart()
+                            + midTableCell(k.get("Address").toString())
+                            + shortTableCell(k.get("Port").toString())
+                            + midTableCell(k.get("Sensorname").toString())
+                            + shortTableCell(k.get("Messagenr").toString())
+                            + midTableCell(k.get("Time").toString())
+                            + midTableCell(k.get("Message").toString())
+                            + tableRowEnd();
+                } catch (JSONException jex) {
+                    jex.printStackTrace();
+                }
             }
         }
 
@@ -156,7 +159,6 @@ public class HttpServer implements Runnable {
     public String weatherPage() {
         String tableContent = "";
 
-        Vector<JSONObject> weatherList = sensorData.getWeatherList();
 
         tableContent += ""
                 + tableRowStart()
@@ -164,16 +166,20 @@ public class HttpServer implements Runnable {
                 + midTableCell("Koordinaten")
                 + midTableCell("Message")
                 + tableRowEnd();
-        for (JSONObject k : weatherList) {
-            try {
-                tableContent += ""
-                        + tableRowStart()
-                        + midTableCell(k.get("name").toString())
-                        + midTableCell(k.get("coord").toString())
-                        + midTableCell(k.get("main").toString())
-                        + tableRowEnd();
-            } catch (JSONException jex) {
-                jex.printStackTrace();
+
+        Vector<JSONObject> weatherList = sensorData.getWeatherList();
+        if (weatherList != null && weatherList.size() > 0) {
+            for (JSONObject k : weatherList) {
+                try {
+                    tableContent += ""
+                            + tableRowStart()
+                            + midTableCell(k.get("name").toString())
+                            + midTableCell(k.get("coord").toString())
+                            + midTableCell(k.get("main").toString())
+                            + tableRowEnd();
+                } catch (JSONException jex) {
+                    jex.printStackTrace();
+                }
             }
         }
 

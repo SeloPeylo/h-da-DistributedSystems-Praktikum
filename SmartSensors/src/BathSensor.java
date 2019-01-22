@@ -2,10 +2,15 @@ import java.net.UnknownHostException;
 
 public class BathSensor extends Sensor {
 
-    public BathSensor() throws UnknownHostException{
-        this.sensorName = "BathSensor-" + this.sensorNumber;
+    public BathSensor(){
+        this.sensorName = "BathSensor-" + this.sensorID;
     }
 
+
+    /**
+     * Misst die Drehzahl des Lüfters in RPM 0 bis 8000
+     * @return
+     */
     @Override
     protected String measure()
     {
